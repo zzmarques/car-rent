@@ -1,0 +1,112 @@
+@use '../variables';
+@use '../mixins';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 288px;
+    padding-top: 30px;
+    background-color: variables.$white-color;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        width: 327px;
+        height: 28px;
+
+        .logo {
+            width: 108px;
+            height: 28px;
+
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 120%;
+                text-transform: uppercase;
+                color: variables.$primary-D500;
+            }
+        }
+
+        .foto-perfil {
+            @include mixins.center;
+            width: 28px;
+            height: 28px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        width: 327px;
+        height: 48px;
+
+        .container-input {
+            position: relative;
+            width: 263px;
+            height: 48px;
+
+            input[type="search"] {
+                width: 100%;
+                height: 100%;
+                border: 1px solid variables.$secondinary-400;
+                border-radius: 10px;
+                padding-left: 55px;
+
+                &::placeholder {
+                    font-size: 14px;
+                    line-height: 150%;
+                    color: variables.$secondinary-400;
+                }
+
+                &:focus {
+                    outline: none
+                }
+
+                &::-webkit-search-decoration,
+                &::-webkit-search-cancel-button {
+                    display: none;
+                }
+
+            }
+
+            label {
+                @include mixins.center;
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                width: 28px;
+                height: 28px;
+
+                svg {
+                    font-size: 28px;
+                    color: variables.$secondinary-400;
+                }
+            }
+        }
+
+        .filter {
+            @include mixins.center;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            border: 1px solid variables.$secondinary-400;
+            border-radius: 10px;
+
+            svg {
+                
+                font-size: 27px;
+                color: variables.$secondinary-400;
+            }
+        }
+    }
+}
