@@ -15,7 +15,7 @@
         height: 232px;
         padding: 15px 15px 5px 15px;
         background-color: variables.$information-D500;
-        background-image: url('../../assets/imgs/BG.png');
+        background-image: url('../../assets/imgs/ads1.png');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 10px;
@@ -63,5 +63,11 @@
                 object-fit: cover;
             }
         }
+    }
+
+    .slide-car2 {
+        @extend .slide-car1;
+        background-color: variables.$primary-D500;
+        background-image: url('../../assets/imgs/ads2.png');
     }
 }

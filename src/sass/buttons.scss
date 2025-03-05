@@ -1,6 +1,7 @@
 @use 'variables';
 
 .btn {
+    cursor: pointer;
     width: 128px;
     height: 44px;
     background-color: variables.$primary-D500;
@@ -11,4 +12,8 @@
     font-weight: 600;
     color: variables.$white-color;
 
+}
+
+.ads2 {
+    background-color: variables.$information-D500;
 }
