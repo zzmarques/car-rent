@@ -1,0 +1,67 @@
+@use '../variables';
+@use '../mixins';
+
+.container-slid {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .slide-car1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 327px;
+        height: 232px;
+        padding: 15px 15px 5px 15px;
+        background-color: variables.$information-D500;
+        background-image: url('../../assets/imgs/BG.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+
+        .container-infos {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .container-title {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 240px;
+                height: 70px;
+
+                .title {
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 150%;
+                    color: variables.$white-color;
+                    white-space: nowrap;
+                }
+    
+                .subtitle {
+                    display: inline-block;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 160%;
+                    color: variables.$white-color;
+                    width: 216px;
+                }
+            }
+        }
+
+        .container-img {
+            @include mixins.center;
+            width: 100%;
+            height: 56px;
+
+            img {
+                width: 196px;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+}

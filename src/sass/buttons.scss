@@ -1,0 +1,14 @@
+@use 'variables';
+
+.btn {
+    width: 128px;
+    height: 44px;
+    background-color: variables.$primary-D500;
+    border: 0;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: variables.$white-color;
+
+}
