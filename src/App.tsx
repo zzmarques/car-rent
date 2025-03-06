@@ -1,5 +1,6 @@
 import Container from './components/Container'
 import Header from './components/Header'
+import Pickup from './components/Pickup'
 import { Slide } from './components/Slide'
 import './sass/main.scss'
 
@@ -11,6 +12,7 @@ function App() {
         
       <Container>
         <Slide/>
+        <Pickup/>
       </Container>
     </>
   )
