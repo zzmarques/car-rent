@@ -4,6 +4,8 @@
 .container-pickup {
     @include mixins.center;
     flex-direction: column;
+    gap: 40px;
+    position: relative;
 
     .cardPick {
         @include mixins.center;
@@ -19,6 +21,7 @@
             flex-direction: column;
             width: 295px;
             height: 88px;
+            
 
             .label-pick {
                 @include mixins.center;
@@ -79,6 +82,11 @@
                 width: 100%;
                 height: 44px;
 
+                .linha {
+                    width: 1px;
+                    height: 100%;
+                    background-color: rgba(variables.$secondinary-200, 0.4);
+                }
 
                 .field {
                     cursor: pointer;

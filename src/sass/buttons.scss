@@ -17,3 +17,21 @@
 .ads2 {
     background-color: variables.$information-D500;
 }
+
+.swap-btn {
+    @extend .btn;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px 0px rgba(variables.$primary-D500, 0.3); 
+
+    svg {
+        width: 24px;
+        height: 24px;
+        font-size: 2rem;
+    }
+}

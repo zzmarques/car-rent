@@ -1,4 +1,5 @@
 import { FiChevronDown } from "react-icons/fi";
+import { HiArrowsUpDown } from "react-icons/hi2";
 import '../../sass/components/_Pickup.scss';
 
 const Pickup = () => {
@@ -22,7 +23,7 @@ const Pickup = () => {
                                 </div>
                             </div>
                         </div>
-
+                        <div className="linha"></div>
                         <div className="field">
                             <label>Date</label>
                             <div className="container-date">
@@ -33,6 +34,7 @@ const Pickup = () => {
                             </div>
                             
                         </div>
+                        <div className="linha"></div>
                         <div className="field">
                             <label>Time</label>
                             <div className="container-time">
@@ -48,7 +50,7 @@ const Pickup = () => {
                 </div>
             </div>
             
-            <button className="swap-button">&#8645;</button>
+            <button className="swap-btn"><HiArrowsUpDown/></button>
 
             <div className="cardPick">
                 <div className='conetent-pick'>
@@ -66,7 +68,7 @@ const Pickup = () => {
                                     </div>
                                 </div>
                             </div>
-
+                            <div className="linha"></div>
                             <div className="field">
                                 <label>Date</label>
                                 <div className="container-date">
@@ -77,6 +79,7 @@ const Pickup = () => {
                                 </div>
                                 
                             </div>
+                            <div className="linha"></div>
                             <div className="field">
                                 <label>Time</label>
                                 <div className="container-time">
