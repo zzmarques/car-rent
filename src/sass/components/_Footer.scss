@@ -1,0 +1,99 @@
+@use '../variables';
+@use '../mixins';
+
+.footer {
+    @include mixins.center;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    padding: 25px 0;
+    background-color:  rgba(variables.$secondinary-200, 0.2);
+
+
+    .container-title,
+    .footer-navbar,
+    .container-cops {
+        width: 327px;
+    }
+
+    .container-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        height: 92px;
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: variables.$primary-D500;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 200%;
+            color: variables.$secondinary-300;
+        }
+    }
+
+    .footer-navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-between;
+
+        .about {
+            width: 142px;
+        }
+        .social {
+            width: 120px;
+        }
+        .community {
+            width: 120px;
+        }
+        .container-navbar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            height: 192px;
+
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                color: variables.$secondinary-D500;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                list-style: none;
+
+                li {
+                    font-size: 16px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    color: variables.$secondinary-300;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .container-cops {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        span {
+            font-size: 12px;
+            font-weight: 600;
+            color: variables.$secondinary-D500;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import Container from './components/Container'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Pickup from './components/Pickup'
 import { Slide } from './components/Slide'
@@ -14,6 +15,8 @@ function App() {
         <Slide/>
         <Pickup/>
       </Container>
+
+      <Footer/>
     </>
   )
 }
