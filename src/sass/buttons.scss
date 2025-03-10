@@ -35,3 +35,9 @@
         font-size: 2rem;
     }
 }
+
+.btn-card {
+    @extend .btn;
+    width: 100px;
+    height: 36px;
+}
