@@ -1,0 +1,32 @@
+@use '../variables';
+@use '../mixins';
+
+
+.container-popular {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+
+    .container-cards {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        position: relative;
+        width: 100%;
+        overflow: scroll;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 92px;
+            height: 100%;
+            background-image: linear-gradient(to left, variables.$white-color, transparent);
+        }
+    }
+}

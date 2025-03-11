@@ -1,5 +1,6 @@
 @use 'variables' as *;
-@use 'buttons.scss' as *;
+@use 'buttons' as *;
+@use 'cards' as *;
 
 * {
     padding: 0;

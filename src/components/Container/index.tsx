@@ -1,11 +1,8 @@
-import { ReactNode } from "react";
+
 import "../../sass/components/_Container.scss"
+import PropsReatcNode from "../../types/propsReatcNode";
 
-interface ContainerProps {
-    children: ReactNode;
-}
-
-const Container = ({ children }: ContainerProps) => {
+const Container = ({ children }: PropsReatcNode) => {
     return (
         <main className="container">
             { children }

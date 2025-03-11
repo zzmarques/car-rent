@@ -1,0 +1,28 @@
+@use '../variables';
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 327px;
+    height: 20px;
+    margin: 0 auto;
+
+    span {
+        font-size: 14;
+        font-weight: 600;
+        color: variables.$secondinary-300;
+    }
+
+    a {
+        text-decoration: none;
+
+        span {
+            font-size: 12px;
+            font-weight: 600;
+            color: variables.$primary-D500;
+        }
+        
+    }
+
+}
