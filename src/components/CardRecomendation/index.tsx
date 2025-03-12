@@ -13,7 +13,7 @@ const CardRecomendation = () => {
                             <span className="name">Koenigsegg</span>
                             <span className="type">Sport</span>
                         </div>
-                        <GoHeartFill />
+                        <GoHeart className="no-fav"/>
                     </div>
 
                     <div className="car-info">

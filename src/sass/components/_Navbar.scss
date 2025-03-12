@@ -1,0 +1,25 @@
+@use '../variables';
+@use '../mixins';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 327px;
+    height: 28px;
+
+    svg {
+        display: none
+    }
+
+    .foto-perfil {
+        @include mixins.center;
+        width: 28px;
+        height: 28px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
