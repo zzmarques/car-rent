@@ -10,9 +10,13 @@ const CatalogPopular = () => {
 
                 <a href="#"><span>View All</span></a>
             </CatalogHeader>
-
-            <div className="container-cards">
-                <CardPopular/>
+            <div className="container-wrapper">
+                <div className="container-cards">
+                    <CardPopular/>
+                    <CardPopular/>
+                    <CardPopular/>
+                    
+                </div>
             </div>
         </section>
     )
