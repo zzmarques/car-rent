@@ -38,7 +38,6 @@
                 width: 486px;
                 height: auto;
                 gap: 10px;
-                border: 1px solid red;
             }
             
 
@@ -102,7 +101,6 @@
                 height: 44px;
 
                 @include mixins.desktop {
-                    border: 1px solid red;
                     height: 48px;
                 }
 
