@@ -2,7 +2,7 @@ import { GoHeartFill, GoHeart } from "react-icons/go";
 import { MdPeopleAlt } from "react-icons/md";
 import { FaGasPump } from "react-icons/fa6";
 import { RiSteeringFill } from "react-icons/ri";
-import img from "../../../public/img/car.png";
+import img from "../../../public/img/ads1.png";
 
 const CardPopular = () => {
     return (

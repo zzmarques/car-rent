@@ -3,3 +3,9 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

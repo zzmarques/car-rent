@@ -7,6 +7,15 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @include mixins.desktop {
+        @include mixins.center;
+        gap: 20px;
+        position: relative;
+        top: 0px;
+        left: 0;
+        transform: translateX(0);
+    }
+
     .slide-car1 {
         display: flex;
         flex-direction: column;
@@ -17,8 +26,18 @@
         background-color: variables.$information-D500;
         background-image: url('../../assets/imgs/ads1.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-position: bottom;
+        background-size: 100%;
         border-radius: 10px;
+
+        @include mixins.desktop {
+            width: 640px;
+            height: 360px;
+            padding: 20px 20px 5px 20px;
+            background-image: url('../../assets/imgs/ads1-bg.png');
+            background-position: -30px;
+            margin-bottom: 20px;
+        }
 
         .container-infos {
             display: flex;
@@ -32,13 +51,23 @@
                 width: 240px;
                 height: 70px;
 
+                @include mixins.desktop {
+                    justify-content: space-between;
+                    width: 284px;
+                    height: 160px;
+                }
+
                 .title {
                     display: inline-block;
                     font-size: 16px;
                     font-weight: 600;
-                    line-height: 150%;
                     color: variables.$white-color;
-                    white-space: nowrap;
+                    white-space: nowrap; 
+
+                    @include mixins.desktop {
+                        font-size: 32px;
+                        white-space: wrap; 
+                    }
                 }
     
                 .subtitle {
@@ -48,6 +77,11 @@
                     line-height: 160%;
                     color: variables.$white-color;
                     width: 216px;
+
+                    @include mixins.desktop {
+                        font-size: 16px;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -57,17 +91,44 @@
             width: 100%;
             height: 56px;
 
+            @include mixins.desktop {
+                height: 116px;
+            }
+
             img {
                 width: 196px;
                 height: auto;
                 object-fit: cover;
+
+                @include mixins.desktop  {
+                    width: 406px;
+                }
             }
         }
     }
 
     .slide-car2 {
+        display: none;
         @extend .slide-car1;
         background-color: variables.$primary-D500;
         background-image: url('../../assets/imgs/ads2.png');
+
+        @include mixins.desktop {
+            display: block;
+            background-image: url('../../assets/imgs/ads2-bg.png');
+            background-position: center;
+        }
+
+        .container-img {
+            @include mixins.desktop {
+                height: 108px;
+            }
+
+            img {
+                @include mixins.desktop  {
+                    width: 340px;
+                }
+            }
+        }
     }
 }
