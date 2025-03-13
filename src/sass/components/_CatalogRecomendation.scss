@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 .catalog-recomendation {
     display: flex;
     flex-direction: column;
@@ -9,5 +12,20 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .container-more {
+        @include mixins.center;
+        position: relative;
+        width: 327px;
+        margin: 0 auto;
+
+        span {
+            position: absolute;
+            right: 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: variables.$secondinary-300;
+        }
     }
 }

@@ -24,6 +24,11 @@ const CatalogRecomendation = () => {
                 <CardRecomendation/>
                 <CardRecomendation/>
             </div>
+
+            <div className="container-more">
+                <button className="btn-more">Show More Car</button>
+                <span>120 Car</span>
+            </div>
         </section>
     )
 }

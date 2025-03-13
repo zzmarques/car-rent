@@ -57,3 +57,9 @@
         color: variables.$secondinary-400;
     }
 }
+
+.btn-more {
+    @extend .btn;
+    width: 120px;
+    height: 36px;
+}
