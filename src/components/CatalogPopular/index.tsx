@@ -15,7 +15,7 @@ const CatalogPopular = () => {
                     <CardPopular/>
                     <CardPopular/>
                     <CardPopular/>
-                    
+                    <CardPopular/>
                 </div>
             </div>
         </section>

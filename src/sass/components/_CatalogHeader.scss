@@ -1,4 +1,5 @@
 @use '../variables';
+@use '../mixins';
 
 .cabecalho {
     display: flex;
@@ -8,10 +9,20 @@
     height: 20px;
     margin: 0 auto;
 
+    @include mixins.desktop {
+        width: 100%;
+        height: 44px;
+        padding-inline: 20px;
+    }
+
     span {
         font-size: 14;
         font-weight: 600;
         color: variables.$secondinary-300;
+
+        @include mixins.desktop {
+            font-size: 16px;
+        }
     }
 
     a {
@@ -21,6 +32,10 @@
             font-size: 12px;
             font-weight: 600;
             color: variables.$primary-D500;
+
+            @include mixins.desktop {
+                font-size: 16px;
+            }
         }
         
     }

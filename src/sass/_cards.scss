@@ -11,12 +11,21 @@
     background-color: variables.$white-color;
     border-radius: 10px;
 
+    @include mixins.desktop {
+        width: 304px;
+        height: 388px;
+    }
+
     .card-cabecalho {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 220px;
         margin: 0 auto;
+
+        @include mixins.desktop {
+            width: 256px;
+        }
 
         .container-name {
             display: flex;
@@ -28,12 +37,22 @@
                 font-weight: 600;
                 color: variables.$secondinary-D500;
 
+                @include mixins.desktop {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
             }
 
             .type {
                 font-size: 12px;
                 font-weight: 500;
                 color: variables.$secondinary-300;
+
+                @include mixins.desktop {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
             }
         }
 
@@ -57,6 +76,12 @@
         img {
             width: 180px;
             height: 56px;
+
+            @include mixins.desktop {
+                width: 232px;
+                height: 72px;
+                object-fit: cover;
+            }
         }
 
         &::before {
@@ -77,6 +102,10 @@
         width: 220px;
         margin: 0 auto;
 
+        @include mixins.desktop {
+            width: 256px;
+        }
+
         .details {
             display: flex;
             align-items: center;
@@ -88,6 +117,10 @@
                 font-weight: 500;
                 color: variables.$secondinary-300;
                 white-space: nowrap;
+
+                @include mixins.desktop {
+                    font-size: 14px;
+                }
             }
 
             svg {
@@ -106,6 +139,10 @@
         align-items: center;
         width: 220px;
         margin: 0 auto;
+
+        @include mixins.desktop {
+            width: 256px;
+        }
 
         .price {
             font-size: 19px;
