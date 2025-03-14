@@ -7,13 +7,13 @@ import "../../sass/components/_Navbar.scss";
 const Navbar = () => {
     return (
         <nav className='navbar'>
-                <div className="fav">
+                <div className="container-icons fav">
                     <GoHeartFill/>
                 </div>
-                <div className="set">
+                <div className="container-icons not">
                     <BiSolidBell />
                 </div>
-                <div className="not">
+                <div className="container-icons set">
                     <RiSettings4Fill />
                 </div>
                 <div className='foto-perfil'>

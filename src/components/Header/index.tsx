@@ -9,12 +9,20 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='container-header'>
-                <div className='logo'>
-                    <h1>morent</h1>
-                </div>
+                <div className="content-header">
+                    <div className='logo'>
+                        <h1>morent</h1>
+                    </div>
 
+                    <div className='form-desktop'>
+                        <Search/>
+
+                        <BtnCategory/>
+                    </div>
+                </div>
                 <Navbar/>
             </div>
+                
 
             <div className='form-container'>
                 <Search/>

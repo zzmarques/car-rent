@@ -6,12 +6,22 @@
     width: 263px;
     height: 48px;
 
+    @include mixins.desktop {
+        width: 400px;
+        height: 100%;
+    }
+
     input[type="search"] {
         width: 100%;
         height: 100%;
         border: 1px solid rgba(variables.$secondinary-200, 0.4);
         border-radius: 10px;
         padding-left: 55px;
+
+        @include mixins.desktop {
+            padding-left: 40px;
+            border: 0;
+        }
 
         &::placeholder {
             font-size: 14px;
@@ -40,9 +50,18 @@
         width: 28px;
         height: 28px;
 
+        @include mixins.desktop {
+            left: 0;
+        }
+
         svg {
             font-size: 28px;
             color: variables.$secondinary-400;
+
+            @include mixins.desktop {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }
