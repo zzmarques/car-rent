@@ -12,7 +12,7 @@ const Footer = () => {
 
             <nav className="footer-navbar">
 
-                <div className="container-navbar">
+                <div className="container-navbar about">
                     <h2>About</h2>
                     <ul>
                         <li>How it works</li>
@@ -22,7 +22,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 
-                <div className="container-navbar">
+                <div className="container-navbar social">
                     <h2>Socials</h2>
                     <ul>
                         <li>Discord</li>
@@ -32,7 +32,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="container-navbar">
+                <div className="container-navbar community">
                     <h2>Community</h2>
                     <ul>
                         <li>Events</li>
@@ -49,6 +49,11 @@ const Footer = () => {
                 <span className="cop-1">Privacy & Policy</span>
                 <span className="cop-2">Terms & Condition</span>
                 <span className="cop-3">©2022 MORENT. All rights reserved</span>
+                <div className='container-p-c'>
+                    <span className="cop-2">Terms & Condition</span>
+                    <span className="cop-3">©2022 MORENT. All rights reserved</span>
+                </div>
+                
             </div>
         </footer>
     )
