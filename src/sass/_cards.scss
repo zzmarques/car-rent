@@ -74,6 +74,7 @@
         @include mixins.center;
         position: relative;
         width: 100%;
+        margin: 40px 0px;
 
         @include mixins.desktop {
             height: 100px;
@@ -146,9 +147,9 @@
         align-items: center;
         width: 220px;
         margin: 0 auto;
+        margin-top: 20px;
 
         @include mixins.desktop {
-            margin-top: 20px;
             width: 256px;
         }
 
@@ -171,6 +172,7 @@
 }
 .card-recomendation{
     @extend .card;
+    gap: 45px;
     width: 327px;
     margin: 0 auto;
 
@@ -221,12 +223,12 @@
             display: flex;
             justify-content: flex-start;
             width: 221px;
+            margin: 0;
 
             @include mixins.desktop {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                margin: 0;
             }
     
             img {
@@ -263,6 +265,7 @@
 
     .container-price {
         width: 300px;
+        margin: 0;
 
         @include mixins.desktop {
             width: 256px;
