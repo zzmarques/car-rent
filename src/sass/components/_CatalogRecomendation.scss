@@ -8,10 +8,24 @@
     width: 100%;
     margin-top: 40px;
 
+    @include mixins.desktop {
+        gap: 20px;
+        max-width: 1312px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
     .container-card-rec {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @include mixins.desktop {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 31px;
+        }
     }
 
     .container-more {
@@ -20,12 +34,21 @@
         width: 327px;
         margin: 0 auto;
 
+        @include mixins.desktop {
+            width: 100%;
+            margin: 40px 0px;
+        }
+
         span {
             position: absolute;
             right: 0;
             font-size: 14px;
             font-weight: bold;
             color: variables.$secondinary-300;
+
+            @include mixins.desktop {
+                font-weight: 500;
+            }
         }
     }
 }
