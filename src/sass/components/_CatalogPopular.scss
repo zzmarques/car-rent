@@ -36,7 +36,13 @@
 
             @include mixins.desktop {
                 gap: 32px;
-                overflow: none;
+                overflow: hidden;
+            }
+
+            @include mixins.laptop {
+                justify-content: space-between;
+                gap: 0;
+                padding-inline: 20px;
             }
         }
 

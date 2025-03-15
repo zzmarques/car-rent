@@ -17,6 +17,11 @@
         height: 388px;
     }
 
+    @include mixins.laptop {
+        width: 240px;
+        height: 310px;
+    }
+
     .card-cabecalho {
         display: flex;
         justify-content: space-between;
@@ -27,6 +32,10 @@
         @include mixins.desktop {
             width: 256px;
             height: 48px;
+        }
+
+        @include mixins.laptop {
+            width: 210px;
         }
 
         .container-name {
@@ -81,6 +90,10 @@
             margin: 58px 0px;
         }
 
+        @include mixins.laptop {
+            margin: 30px 0px;
+        }
+
         img {
             width: 180px;
             height: 56px;
@@ -89,6 +102,11 @@
                 width: 232px;
                 height: 72px;
                 object-fit: cover;
+            }
+
+            @include mixins.laptop {
+                width: 225px;
+                object-fit: contain;
             }
         }
 
@@ -112,6 +130,10 @@
 
         @include mixins.desktop {
             width: 256px;
+        }
+
+        @include mixins.laptop {
+            width: 210px;
         }
 
         .details {
@@ -151,6 +173,10 @@
 
         @include mixins.desktop {
             width: 256px;
+        }
+
+        @include mixins.laptop {
+            width: 210px;
         }
 
         .price {
