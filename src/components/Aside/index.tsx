@@ -1,11 +1,12 @@
+import "../../sass/components/_Aside.scss"
 
 const Aside = () => {
     return (
         <aside className="container-aside">
             <section className="content-aside">
                 <span className="title-aside">type</span>
-                <div className="container-options">
 
+                <div className="container-options">
                     <div className="container-forms">
                         <input type="checkbox" name="sport" id="sport"/>
                         <label>Sport <span>(10)</span></label>
@@ -69,7 +70,7 @@ const Aside = () => {
                 <span className="title-aside">price</span>
 
                 <div className="container-options">
-                    <div className="container-forms">
+                    <div className="container-forms container-price">
                         <input type="range" name="price" id="price" />
                         <span className="max-price">Max. $100.00</span>
                     </div>
