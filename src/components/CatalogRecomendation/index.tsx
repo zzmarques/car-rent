@@ -2,6 +2,7 @@
 import CatalogHeader from "../CatalogHeader";
 import "../../sass/components/_CatalogRecomendation.scss"
 import CardRecomendation from "../CardRecomendation";
+import More from "../More";
 
 const CatalogRecomendation = () => {
     return (
@@ -25,10 +26,7 @@ const CatalogRecomendation = () => {
                 <CardRecomendation/>
             </div>
 
-            <div className="container-more">
-                <button className="btn-more">Show More Car</button>
-                <span>120 Car</span>
-            </div>
+            <More/>
         </section>
     )
 }

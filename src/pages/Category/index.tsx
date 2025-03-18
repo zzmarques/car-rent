@@ -1,15 +1,32 @@
 import Aside from "../../components/Aside";
-import CatalogRecomendation from "../../components/CatalogRecomendation";
-import Container from "../../components/Container";
+import CardRecomendation from "../../components/CardRecomendation";
+import More from "../../components/More";
+import Pickup from "../../components/Pickup";
 import '../../sass/pages/_Category.scss'
 
 const Category = () => {
     return (
         <main className="category">
             <Aside/>
-            <Container >
-                <CatalogRecomendation/>
-            </Container>
+            <section className="contente-category">
+                <Pickup/>
+                <div className="container-cards">
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>
+                    <CardRecomendation/>                    
+                </div>
+
+                <More/>
+            </section>            
         </main>
         
     )

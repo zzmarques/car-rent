@@ -33,27 +33,5 @@
         }
     }
 
-    .container-more {
-        @include mixins.center;
-        position: relative;
-        width: 327px;
-        margin: 0 auto;
-
-        @include mixins.desktop {
-            width: 100%;
-            margin: 40px 0px;
-        }
-
-        span {
-            position: absolute;
-            right: 0;
-            font-size: 14px;
-            font-weight: bold;
-            color: variables.$secondinary-300;
-
-            @include mixins.desktop {
-                font-weight: 500;
-            }
-        }
-    }
+    
 }
