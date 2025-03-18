@@ -62,7 +62,6 @@
 
 }
 
-
 .btn-category {
     @include mixins.center;
     cursor: pointer;
@@ -95,5 +94,20 @@
     @include mixins.desktop {
         width: 156px;
         height: 44px;
+    }
+}
+
+.btn-hamb {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    @include mixins.desktop {
+        display: none;
+    }
+
+    svg {
+        font-size: 2rem;
+        color: variables.$secondinary-300;
     }
 }

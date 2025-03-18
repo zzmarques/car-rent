@@ -46,8 +46,6 @@
 
         }
 
-        
-
         .logo {
             width: 108px;
             height: 28px;
@@ -94,6 +92,27 @@
 
         @include mixins.desktop {
             display: none;
+        }
+    }
+}
+
+.header-category {
+    @extend .header;
+    justify-content: center;
+    gap: 30px;
+    height: 222px;
+    padding-top: 0;
+
+    .container-header {
+        height: auto;
+
+        .header-category {
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            align-items: flex-start;
+            height: auto;
+            width: 100%;
         }
     }
 }
