@@ -7,6 +7,7 @@ import More from "../More";
 const CatalogRecomendation = () => {
     return (
         <section className="catalog-recomendation">
+            
             <CatalogHeader>
                 <span>Recomendation Car</span>
             </CatalogHeader>
