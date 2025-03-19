@@ -3,21 +3,19 @@ import BtnCategory from "../BtnCategory";
 import Navbar from '../Navbar';
 import '../../sass/components/_Header.scss';
 import { FiMenu } from "react-icons/fi";
+import { PropsHidenOrShow } from "../../types/propsReatcNode";
 // import Aside from "../Aside";
 
-interface NavbarProps {
-    showHamburger: boolean;
-}
 
-const Header:  React.FC<NavbarProps> = ({ showHamburger } ) => {
+const Header:  React.FC<PropsHidenOrShow> = ({ HidenOrShowComponents } ) => {
         
 
     return (
         
-        <header className={showHamburger ? 'header-category' : 'header'}>
+        <header className={HidenOrShowComponents ? 'header-category' : 'header'}>
             <div className='container-header'>
 
-                {showHamburger ? (
+                {HidenOrShowComponents ? (
                     <div className="content-header-category">
                         <div className="btn-hamb">
                             <FiMenu />

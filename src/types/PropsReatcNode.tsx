@@ -1,6 +1,9 @@
 import { ReactNode } from "react";
 
-interface PropsReatcNode {
+export interface PropsReatcNode {
     children: ReactNode;
 }
-export default PropsReatcNode;
+
+export interface PropsHidenOrShow {
+    HidenOrShowComponents: boolean;
+}

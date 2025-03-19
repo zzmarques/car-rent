@@ -193,3 +193,25 @@
         }
     }
 }
+
+.container-pickup-category {
+    @extend .container-pickup;
+    width: 100%;
+
+    .cardPick {
+        @include mixins.desktop {
+            width: 100%;
+        }
+
+        .conetent-pick {
+
+            @include mixins.desktop {
+                width: 380px;
+            }
+
+            @include mixins.laptop {
+                width: 280px;
+            }
+        }
+    }
+}

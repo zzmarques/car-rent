@@ -11,7 +11,7 @@ const Layout = () => {
 
     return (
         <>
-            <Header showHamburger={showHamburger}/>
+            <Header HidenOrShowComponents={showHamburger}/>
             <>
                 <Outlet />
             </>

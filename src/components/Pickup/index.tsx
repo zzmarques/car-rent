@@ -1,10 +1,12 @@
 import { FiChevronDown } from "react-icons/fi";
 import { HiArrowsUpDown } from "react-icons/hi2";
 import '../../sass/components/_Pickup.scss';
+import React from "react";
+import { PropsHidenOrShow } from "../../types/propsReatcNode";
 
-const Pickup = () => {
+const Pickup: React.FC<PropsHidenOrShow> = ( {HidenOrShowComponents} ) => {
     return (
-        <section className="container-pickup">
+        <section className={!HidenOrShowComponents ? "container-pickup-category" : "container-pickup"}>
 
             <div className="cardPick">
                 <div className='conetent-pick'>
