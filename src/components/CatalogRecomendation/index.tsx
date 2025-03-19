@@ -1,8 +1,9 @@
 
 import CatalogHeader from "../CatalogHeader";
-import "../../sass/components/_CatalogRecomendation.scss"
 import CardRecomendation from "../CardRecomendation";
 import More from "../More";
+import "../../sass/components/_CatalogRecomendation.scss"
+
 
 const CatalogRecomendation = () => {
     return (

@@ -6,11 +6,20 @@
     height: 100%;
     background-color:  rgba(variables.$secondinary-200, 0.2);
 
+    @include mixins.desktop {
+        display: flex;
+        gap: 20px;
+    }
+
     .contente-category {
         @include mixins.center;
         flex-direction: column;
         gap: 20px;
         padding: 20px;
+
+        @include mixins.desktop {
+            width: 100%;
+        }
 
         .container-cards {
             display: flex;

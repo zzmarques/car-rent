@@ -12,13 +12,15 @@
         justify-content: space-between;
         max-width: 1312px;
         position: relative;
-        top: 0px;
+        top: 0;
         left: 0;
         transform: translateX(0);
         margin: 0 auto;
     }
 
     @include mixins.laptop {
+        @include mixins.center;
+        gap: 30px;
         padding-inline: 20px;
     }
 
@@ -45,13 +47,6 @@
             margin-bottom: 20px;
         }
 
-        
-        @include mixins.laptop {
-            width: 480px;
-            height: 320px;
-            background-position: -50px;
-        }
-
         .container-infos {
             display: flex;
             flex-direction: column;
@@ -70,11 +65,6 @@
                     height: 160px;
                 }
 
-                @include mixins.laptop {
-                    width: 240px;
-                    height: auto;
-                }
-
                 .title {
                     display: inline-block;
                     font-size: 16px;
@@ -85,10 +75,6 @@
                     @include mixins.desktop {
                         font-size: 32px;
                         white-space: wrap; 
-                    }
-
-                    @include mixins.laptop {
-                        font-size: 24px;
                     }
                 }
     
@@ -104,10 +90,6 @@
                         font-size: 16px;
                         width: 100%;
                     }
-
-                    @include mixins.laptop {
-                        font-size: 14px;
-                    }
                 }
             }
         }
@@ -121,10 +103,6 @@
                 height: 116px;
             }
 
-            @include mixins.laptop {
-                height: 100px;
-            }
-
             img {
                 width: 196px;
                 height: auto;
@@ -132,10 +110,6 @@
 
                 @include mixins.desktop  {
                     width: 406px;
-                }
-
-                @include mixins.laptop {
-                    width: 360px;
                 }
             }
         }
@@ -153,26 +127,14 @@
             background-position: center;
         }
 
-        @include mixins.laptop {
-            background-size: cover;
-        }
-
         .container-img {
             @include mixins.desktop {
                 height: 108px;
             }
 
-            @include mixins.laptop {
-                height: 120px;
-            }
-
             img {
                 @include mixins.desktop  {
                     width: 340px;
-                }
-
-                @include mixins.laptop {
-                    width: 320px;
                 }
             }
         }

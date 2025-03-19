@@ -100,13 +100,14 @@
     @extend .header;
     justify-content: center;
     gap: 30px;
+    position: relative;
     height: 222px;
     padding-top: 0;
 
     .container-header {
         height: auto;
 
-        .header-category {
+        .content-header-category{
             display: flex;
             justify-content: flex-start;
             gap: 30px;

@@ -15,7 +15,8 @@
     }
 
     @include mixins.laptop  {
-        padding-inline: 20px
+        @include mixins.center;
+        padding-inline: 20px;
     }
 
     .cardPick {
@@ -31,7 +32,7 @@
         }
 
         @include mixins.laptop {
-            width: 440px;
+            width: 100%;
         }
 
         .conetent-pick {
@@ -46,12 +47,11 @@
                 width: 486px;
                 height: auto;
                 gap: 10px;
-            }
-
-            @include mixins.laptop {
-                width: 390px;
-            }
+            }     
             
+            @include mixins.laptop {
+                width: 430px;
+            }
 
             .label-pick {
                 @include mixins.center;
