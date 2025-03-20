@@ -8,145 +8,145 @@ const Detail = () => {
         <main className="detail">
                 <Aside/>
 
-                <section>
-                    <div>
+                <section className='container-detail'>
+                    <div className='container-about-car'>
 
-                        <div>
-                            <div>
-                                <div>
+                        <div className='container-ads'>
+                            <div className='content-ads'>
+                                <div className='ads-title'>
                                     <span>Sports car with the best designn and acceleration</span>
                                     <span>Safety and comfort while driving a futuristic and elegant sports car</span>
                                 </div>
 
-                                <div>
+                                <div className='car-ads'>
                                     <img src="" alt="" />
                                 </div>
                             </div>
 
-                            <div>
-                                <div>
+                            <div className='ads-prev'>
+                                <div className='prevs'>
                                     <img src="" alt="" />
                                 </div>
 
-                                <div>
+                                <div className='prevs'>
                                     <img src="" alt="" />
                                 </div>
 
-                                <div>
+                                <div className='prevs'>
                                     <img src="" alt="" />
                                 </div>
                             </div>
                         </div>
 
-                        <div>
-                            <div>
-                                <div>
-                                    <span>Nissan GT - R</span>
-                                    <div>
-                                        <span>440+ Reviewer</span>
+                        <div className='container-detail-car'>
+                            <div className='container-detail-header'>
+                                <div className='container-detail-cabecalho'>
+                                    <span className='name-car'>Nissan GT - R</span>
+                                    <div className='cabecalho-reviewer'>
+                                        <span className='qtd-review'>440+ Reviewer</span>
                                     </div>
                                 </div>
 
                                 {/* icon Fav */}
                             </div>
 
-                            <div>
+                            <div className='container-detail-p'>
                                 <p>NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".</p>
                             </div>
 
-                            <div>
-                                <div>
-                                    <div>
-                                        <span>Type Car</span>
-                                        <span>Sport</span>
+                            <div className='container-spesification'>
+                                <div className='content-spesification'>
+                                    <div className='spesification-type'>
+                                        <span className='sub'>Type Car</span>
+                                        <span className='des'>Sport</span>
                                     </div>
 
-                                    <div>
-                                        <span>Steering</span>
-                                        <span>Manual</span>
+                                    <div className='spesification-streering'>
+                                        <span className='sub'>Steering</span>
+                                        <span className='des'>Manual</span>
                                     </div>
                                 </div>
 
-                                <div>
-                                    <div>
-                                        <span>Capacity</span>
-                                        <span>2 Person</span>
+                                <div className='content-spesification'>
+                                    <div className='spesification-capacity'>
+                                        <span className='sub'>Capacity</span>
+                                        <span className='des'>2 Person</span>
                                     </div>
 
-                                    <div>
-                                        <span>Gasoline</span>
-                                        <span>70L</span>
+                                    <div className='spesification-gas'>
+                                        <span className='sub'>Gasoline</span>
+                                        <span className='des'>70L</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div>
-                                <div>
-                                    <h2>$80.00/<span>day</span></h2>
-                                    <span>$100.00</span>
+                            <div className='container-detail-price'>
+                                <div className='content-price'>
+                                    <h2>$80.00/<span className='day'>day</span></h2>
+                                    <span className='price-off'>$100.00</span>
                                 </div>
 
-                                <button>Rent Now</button>
+                                <button className='btn-now'>Rent Now</button>
                             </div>
                         </div>
                         
                     </div>
 
-                    <div>
-                        <div>
+                    <div className='container-reviews'>
+                        <div className='container-reviews-title'>
                             <h1>Reviews</h1>
-                            <div>13</div>
+                            <div className='qnt-reviews'>13</div>
                         </div>
 
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
+                        <div className='content-review'>
+                            <div className='content-review-cabecalho'>
+                                <div className='info-perfil'>
+                                    <div className='foto-perfil'>
                                         <img src="" alt="" />
                                     </div>
-                                    <div>
+                                    <div className='infos-pessoal'>
                                         <span>Alex Stanton</span>
                                         <span>CEO at Bukalapak</span>
                                     </div>
                                 </div>
-                                <div>
-                                    <span>21 July 2022</span>
+                                <div className='container-date'>
+                                    <span className='date'>21 July 2022</span>
                                     {/* stars */}
                                 </div>
                             </div>
-                            <div>
+                            <div className='container-coment'>
                                 <p>We are very happy with the service from the MORENT App. Morent has a low price . . . </p>
                             </div>
                         </div>
 
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
+                        <div className='content-review'>
+                            <div className='content-review-cabecalho'>
+                                <div className='info-perfil'>
+                                    <div className='foto-perfil'>
                                         <img src="" alt="" />
                                     </div>
-                                    <div>
+                                    <div className='infos-pessoal'>
                                         <span>Skylar Dias</span>
                                         <span>CEO at Amazon</span>
                                     </div>
                                 </div>
-                                <div>
-                                    <span>20July 2022</span>
+                                <div className='container-date'>
+                                    <span className='date'>20July 2022</span>
                                     {/* stars */}
                                 </div>
                             </div>
-                            <div>
+                            <div className='container-coment'>
                                 <p>We are greatly helped by the services of the MORENT Application. Morent has a low . . .</p>
                             </div>
                         </div>
 
-                        <div>
-                            <button>Show all</button>
+                        <div className='container-reviews-show'>
+                            <button className='btn-show-all'>Show all</button>
                         </div>
                     </div>
                 </section>
 
-                <section>
+                <section className='container-catalogs'>
                     <CatalogPopular/>
                     <CatalogRecomendation/>
                 </section>            
