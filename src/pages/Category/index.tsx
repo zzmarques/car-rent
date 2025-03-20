@@ -16,7 +16,7 @@ const Category = () => {
 
     return (
         <main className="category">
-            <Aside/>
+            {!wv && <Aside/>}
             <section className="contente-category">
                 <Pickup HidenOrShowComponents={wv}/>
                 <div className="container-cards">

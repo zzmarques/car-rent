@@ -1,17 +1,12 @@
-// import { useEffect, useState } from "react";
+
 import "../../sass/components/_Aside.scss"
 
 const Aside = () => {
 
-    // const [ wv, setWv ] = useState(false);
 
-    // useEffect(() => {
-    //     const wv = innerWidth;
-    //     wv < 1024 ? setWv(true) : setWv(false);
-    // } ,[]);
 
     return (
-        <aside className="container-aside ">
+        <aside className= "container-aside">
             <section className="content-aside">
                 <span className="title-aside">type</span>
 
