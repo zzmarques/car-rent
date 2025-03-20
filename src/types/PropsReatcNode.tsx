@@ -5,5 +5,5 @@ export interface PropsReatcNode {
 }
 
 export interface PropsHidenOrShow {
-    HidenOrShowComponents: boolean;
+    HidenOrShowComponents?: boolean;
 }
