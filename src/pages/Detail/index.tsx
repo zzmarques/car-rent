@@ -2,6 +2,12 @@
 import Aside from '../../components/Aside';
 import CatalogPopular from '../../components/CatalogPopular';
 import CatalogRecomendation from '../../components/CatalogRecomendation';
+import '../../sass/pages/_Detail.scss';
+import carImg from '../../../public/img/asd2.png';
+import carV1 from '../../../public/img/view1.png'
+import carV2 from '../../../public/img/view2.png'
+import carV3 from '../../../public/img/view3.png'
+import { HiStar, HiOutlineStar } from "react-icons/hi";
 
 const Detail = () => {
     return (
@@ -14,35 +20,42 @@ const Detail = () => {
                         <div className='container-ads'>
                             <div className='content-ads'>
                                 <div className='ads-title'>
-                                    <span>Sports car with the best designn and acceleration</span>
-                                    <span>Safety and comfort while driving a futuristic and elegant sports car</span>
+                                    <span className='ads-title'>Sports car with the best designn and acceleration</span>
+                                    <span className='ads-subtitle'>Safety and comfort while driving a futuristic and elegant sports car</span>
                                 </div>
 
                                 <div className='car-ads'>
-                                    <img src="" alt="" />
+                                    <img src={carImg} alt="" />
                                 </div>
                             </div>
 
                             <div className='ads-prev'>
-                                <div className='prevs'>
-                                    <img src="" alt="" />
+                                <div className='prevs active'>
+                                    <img src={carV1} alt="" />
                                 </div>
 
                                 <div className='prevs'>
-                                    <img src="" alt="" />
+                                    <img src={carV2} alt="" />
                                 </div>
 
                                 <div className='prevs'>
-                                    <img src="" alt="" />
+                                    <img src={carV3} alt="" />
                                 </div>
                             </div>
                         </div>
 
                         <div className='container-detail-car'>
                             <div className='container-detail-header'>
-                                <div className='container-detail-cabecalho'>
+                                <div className='container-detail-title'>
                                     <span className='name-car'>Nissan GT - R</span>
                                     <div className='cabecalho-reviewer'>
+                                        <div className='container-star'>
+                                            <HiStar/>
+                                            <HiStar/>
+                                            <HiStar/>
+                                            <HiStar/>
+                                            <HiOutlineStar className='star-off'/>
+                                        </div>
                                         <span className='qtd-review'>440+ Reviewer</span>
                                     </div>
                                 </div>
@@ -56,24 +69,24 @@ const Detail = () => {
 
                             <div className='container-spesification'>
                                 <div className='content-spesification'>
-                                    <div className='spesification-type'>
+                                    <div className='spesification-type spesification'>
                                         <span className='sub'>Type Car</span>
                                         <span className='des'>Sport</span>
                                     </div>
 
-                                    <div className='spesification-streering'>
+                                    <div className='spesification-streering spesification'>
                                         <span className='sub'>Steering</span>
                                         <span className='des'>Manual</span>
                                     </div>
                                 </div>
 
                                 <div className='content-spesification'>
-                                    <div className='spesification-capacity'>
+                                    <div className='spesification-capacity spesification' >
                                         <span className='sub'>Capacity</span>
                                         <span className='des'>2 Person</span>
                                     </div>
 
-                                    <div className='spesification-gas'>
+                                    <div className='spesification-gas spesification'>
                                         <span className='sub'>Gasoline</span>
                                         <span className='des'>70L</span>
                                     </div>
@@ -82,7 +95,7 @@ const Detail = () => {
 
                             <div className='container-detail-price'>
                                 <div className='content-price'>
-                                    <h2>$80.00/<span className='day'>day</span></h2>
+                                    <h2>$80.00/<span className='day'>days</span></h2>
                                     <span className='price-off'>$100.00</span>
                                 </div>
 
