@@ -1,7 +1,7 @@
 import { BiSolidBell } from "react-icons/bi";
 import { RiSettings4Fill } from "react-icons/ri";
 import { GoHeartFill } from "react-icons/go";
-import img from '../../assets/imgs/Image.png';
+import img from '../../../public/img/profill1.png';
 import "../../sass/components/_Navbar.scss";
 
 const Navbar = () => {
