@@ -9,11 +9,16 @@
 
 
     .container-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
 
         .container-about-car {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            width: 327px;
 
             .container-ads {
                 display: flex;
@@ -24,7 +29,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    width: 327px;
+                    width: 100%;
                     height: 232px;
                     padding: 20px;
                     background-color: variables.$primary-D500;
@@ -101,7 +106,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
-                width: 327px;
+                width: 100%;
                 height: 318px;
                 padding: 20px;
                 background-color: variables.$white-color;
@@ -236,6 +241,154 @@
             }
 
 
+        }
+
+        .container-reviews {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 327px;
+            height: 384px;
+            padding: 20px 15px;
+            background-color: variables.$white-color;
+            border-radius: 10px;
+
+            .container-reviews-title {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                h1 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    letter-spacing: -0.2px;
+                    color: variables.$secondinary-D500;
+                }
+
+                .qnt-reviews {
+                    @include mixins.center;
+                    width: 44px;
+                    height: 28px;
+                    background-color: variables.$primary-D500;
+                    border-radius: 4px;
+
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: -0.2px;
+                    color: variables.$white-color;
+                }
+            }
+
+            .content-review {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 295px;
+                height: 108px;
+
+                .content-review-cabecalho {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .info-perfil {
+                        display: flex;
+                        gap: 8px;
+
+                        .foto-perfil {
+                            width: 44px;
+                            height: 44px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .infos-pessoal {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            gap: 8px;
+                            width: 102px;
+                            height: 44px;
+
+                            .name {
+                                font-size: 16px;
+                                font-weight: 600;
+                                letter-spacing: -0.2px;
+                                color: variables.$secondinary-D500;
+                            }
+
+                            .ceo {
+                                font-size: 12px;
+                                font-weight: 500;
+                                letter-spacing: -0.2px;
+                                color: variables.$secondinary-300;
+                            }
+                        }
+                    }
+
+                    .container-date {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        gap: 8px;
+                        width: 80px;
+                        height: 46px;
+
+                        .date {
+                            font-size: 12px;
+                            font-weight: 500px;
+                            letter-spacing: -0.2px;
+                            color: variables.$secondinary-300;
+                            padding-top: 5px;
+                        }
+                        
+
+                        .container-star {
+                            display: flex;
+                            gap: 4px;
+
+                            svg {
+                                width: 12px;
+                                height: 12px;
+                                font-size: 2rem;
+                                color: variables.$star-color
+                            }
+
+                            .star-off {
+                                color: variables.$secondinary-300;
+                            }
+                        }
+                    }
+                    
+                }
+
+                .container-coment {
+                    width: 243px;
+                    height: 48px;
+                    margin:  0 auto;
+
+                    p {
+                        font-size: 12px;
+                        font-weight: normal;
+                        letter-spacing: -0.2px;
+                        line-height: 200%;
+                        color: variables.$secondinary-300;
+                    }
+                }
+
+            }
+
+            .container-reviews-show {
+                @include mixins.center;
+                width: 100%;
+                height: 40px;
+            }
         }
     }
 }

@@ -122,3 +122,25 @@
     font-weight: bold;
 
 }
+
+.btn-show-all {
+    @include mixins.center;
+    gap: 8px;
+    width: 130px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: variables.$secondinary-300;
+
+    svg {
+        width: 14px;
+        height: 14px;
+        font-size: 2rem;
+        color: variables.$secondinary-300;
+        text-align: center;
+
+    }
+}

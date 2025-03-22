@@ -7,7 +7,11 @@ import carImg from '../../../public/img/asd2.png';
 import carV1 from '../../../public/img/view1.png'
 import carV2 from '../../../public/img/view2.png'
 import carV3 from '../../../public/img/view3.png'
+import avatar1 from '../../../public/img/profill1.png'
+import avatar2 from '../../../public/img/profill2.png'
 import { HiStar, HiOutlineStar } from "react-icons/hi";
+import { FiChevronDown } from "react-icons/fi";
+import { HiArrowsUpDown } from "react-icons/hi2";
 
 const Detail = () => {
     return (
@@ -115,16 +119,23 @@ const Detail = () => {
                             <div className='content-review-cabecalho'>
                                 <div className='info-perfil'>
                                     <div className='foto-perfil'>
-                                        <img src="" alt="" />
+                                        <img src={avatar1} alt="" />
                                     </div>
                                     <div className='infos-pessoal'>
-                                        <span>Alex Stanton</span>
-                                        <span>CEO at Bukalapak</span>
+                                        <span className='name'>Alex Stanton</span>
+                                        <span className='ceo'>CEO at Bukalapak</span>
                                     </div>
                                 </div>
+
                                 <div className='container-date'>
                                     <span className='date'>21 July 2022</span>
-                                    {/* stars */}
+                                    <div className='container-star'>
+                                        <HiStar/>
+                                        <HiStar/>
+                                        <HiStar/>
+                                        <HiStar/>
+                                        <HiOutlineStar className='star-off'/>
+                                    </div>
                                 </div>
                             </div>
                             <div className='container-coment'>
@@ -136,16 +147,23 @@ const Detail = () => {
                             <div className='content-review-cabecalho'>
                                 <div className='info-perfil'>
                                     <div className='foto-perfil'>
-                                        <img src="" alt="" />
+                                        <img src={avatar2} alt="" />
                                     </div>
                                     <div className='infos-pessoal'>
-                                        <span>Skylar Dias</span>
-                                        <span>CEO at Amazon</span>
+                                        <span className='name'>Skylar Dias</span>
+                                        <span className='ceo'>CEO at Amazon</span>
                                     </div>
                                 </div>
+
                                 <div className='container-date'>
                                     <span className='date'>20July 2022</span>
-                                    {/* stars */}
+                                    <div className='container-star'>
+                                        <HiStar/>
+                                        <HiStar/>
+                                        <HiStar/>
+                                        <HiStar/>
+                                        <HiOutlineStar className='star-off'/>
+                                    </div>
                                 </div>
                             </div>
                             <div className='container-coment'>
@@ -154,7 +172,7 @@ const Detail = () => {
                         </div>
 
                         <div className='container-reviews-show'>
-                            <button className='btn-show-all'>Show all</button>
+                            <button className='btn-show-all'>Show all <FiChevronDown/></button>
                         </div>
                     </div>
                 </section>
