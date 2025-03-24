@@ -7,298 +7,107 @@
     padding: 40px 20px;
     background-color:  rgba(variables.$secondinary-200, 0.2);
 
-
-    .container-detail {
+    @include mixins.desktop {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 20px;
+        padding: 0;
+    }
 
-        .container-about-car {
+    .content-detail {
+
+        @include mixins.desktop {
+            padding-block: 50px;
+            margin: 0 auto;
+        }
+
+        .container-detail {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 20px;
-            width: 327px;
 
-            .container-ads {
+            .container-about-car {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                width: 327px;
 
-                .content-ads {
+                @include mixins.desktop {
+                    width: 1016px;
+                    flex-direction: row;
+                }
+
+                .container-ads {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    width: 100%;
-                    height: 232px;
-                    padding: 20px;
-                    background-color: variables.$primary-D500;
-                    background-image: url('../../assets/imgs/ads2-bg.png');
-                    background-repeat: no-repeat;
-                    background-size: 130%;
-                    border-radius: 10px;
-
-                    .ads-title {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 12px;
-                        width: 250px;
-
-                        .ads-title {
-                            font-size: 16px;
-                            font-weight: 600;
-                            color: variables.$white-color;
-                        }
-
-                        .ads-subtitle {
-                            font-size: 12px;
-                            font-weight: 500;
-                            width: 216px;
-                            color: variables.$white-color;
-                        }
-                    }
-
-                    .car-ads {
-                        width: 190px;
-                        height: 60px;
-                        margin: 0 auto;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                }
-
-                .ads-prev {
-                    display: flex;
                     gap: 20px;
 
-                    .prevs {
-                        width: 96px;
-                        height: 64px;
+                    .content-ads {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 100%;
+                        height: 232px;
+                        padding: 20px;
+                        background-color: variables.$primary-D500;
+                        background-image: url('../../assets/imgs/ads2-bg.png');
+                        background-repeat: no-repeat;
+                        background-size: 130%;
                         border-radius: 10px;
 
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            border-radius: 10px;
-                        }
-                    }
-
-                    .active {
-                        @include mixins.center;
-                        border: 1.5px solid variables.$primary-D500;
-                        background-color: variables.$white-color;
-
-                        img {
-                            width: 88px;
-                            height: 55px;
-                        }
-                    }
-                }
-            }
-
-            .container-detail-car {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                height: 318px;
-                padding: 20px;
-                background-color: variables.$white-color;
-                border-radius: 10px;
-
-                .container-detail-header {
-                    width: 295px;
-
-                    .container-detail-title {
-                        display: flex;
-                        flex-direction: column;
-                        width: 176px;
-                        gap: 6px;
-
-                        .name-car {
-                            font-size: 20px;
-                            font-weight: bold;
-                            letter-spacing: -0.3px;
-                            color: variables.$secondinary-D500;
+                        @include mixins.desktop {
+                            width: 492px;
+                            height: 360px;
                         }
 
-                        .cabecalho-reviewer {
+                        .ads-title {
                             display: flex;
-                            align-items: center;
-                            gap: 8px;
+                            flex-direction: column;
+                            gap: 12px;
+                            width: 250px;
 
-                            .container-star {
-                                display: flex;
-                                gap: 4px;
-
-                                svg {
-                                    width: 12px;
-                                    height: 12px;
-                                    font-size: 2rem;
-                                    color: variables.$star-color
-                                }
-
-                                .star-off {
-                                    color: variables.$secondinary-300;
-                                }
+                            @include mixins.desktop {
+                                width: 383px;
+                                height: 160px;
+                                gap: 16px;
                             }
 
-                            span {
-                                font-size: 12px;
-                                font-weight: 500;
-                                letter-spacing: -0.2px;
-                                color: variables.$secondinary-300;
-                            }
-                        }
-
-                    }
-                }
-
-                .container-detail-p {
-                    width: 295px;
-
-                    p {
-                        font-size: 12px;
-                        font-weight: normal;
-                        line-height: 200%;
-                        color: variables.$secondinary-300;
-                    }
-                }
-
-                .container-spesification {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 295px;
-
-                    .content-spesification {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 16px;
-                        width: 124px;
-
-                        .spesification {
-                            display: flex;
-                            justify-content: space-between;
-                            gap: 24px;
-
-                            .sub {
-                                font-size: 12px;
-                                font-weight: 500;
-                                letter-spacing: -0.2px;
-                                color: variables.$secondinary-300;
-                            }
-
-                            .des {
-                                font-size: 12px;
+                            .ads-title {
+                                font-size: 16px;
                                 font-weight: 600;
-                                letter-spacing: -0.2px;
-                                color: variables.$secondinary-D500;
-                                white-space: nowrap;
+                                color: variables.$white-color;
+
+                                @include mixins.desktop {
+                                    font-size: 32px;
+                                    letter-spacing: -0.3px;
+                                    line-height: 150%;
+                                }
                             }
-                        }
-                    }
-                }
 
-                .container-detail-price {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 295px;
-
-                    .content-price {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 4px;
-                        width: 120px;
-
-                        h2 {
-                            font-size: 21px;
-                            font-weight: bold;
-                            color: variables.$secondinary-D500;
-
-                            .day {
+                            .ads-subtitle {
                                 font-size: 12px;
-                                color: variables.$secondinary-300;
-                                
+                                font-weight: 500;
+                                width: 216px;
+                                color: variables.$white-color;
+
+                                @include mixins.desktop {
+                                    font-size: 16px;
+                                    letter-spacing: -0.2px;
+                                    line-height: 150%;
+                                    width: 284px;
+                                }
                             }
                         }
 
-                        .price-off {
-                            font-size: 12px;
-                            text-decoration: line-through;
-                            font-weight: bold;
-                            color: variables.$secondinary-300;
-                        }
-                    }
-                }
+                        .car-ads {
+                            width: 190px;
+                            height: 60px;
+                            margin: 0 auto;
 
-            }
-
-
-        }
-
-        .container-reviews {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 327px;
-            height: 384px;
-            padding: 20px 15px;
-            background-color: variables.$white-color;
-            border-radius: 10px;
-
-            .container-reviews-title {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-
-                h1 {
-                    font-size: 20px;
-                    font-weight: 600;
-                    letter-spacing: -0.2px;
-                    color: variables.$secondinary-D500;
-                }
-
-                .qnt-reviews {
-                    @include mixins.center;
-                    width: 44px;
-                    height: 28px;
-                    background-color: variables.$primary-D500;
-                    border-radius: 4px;
-
-                    font-size: 14px;
-                    font-weight: bold;
-                    letter-spacing: -0.2px;
-                    color: variables.$white-color;
-                }
-            }
-
-            .content-review {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                width: 295px;
-                height: 108px;
-
-                .content-review-cabecalho {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
-
-                    .info-perfil {
-                        display: flex;
-                        gap: 8px;
-
-                        .foto-perfil {
-                            width: 44px;
-                            height: 44px;
+                            @include mixins.desktop {
+                                width: 380px;
+                                height: 120px;
+                            }
 
                             img {
                                 width: 100%;
@@ -306,89 +115,518 @@
                                 object-fit: cover;
                             }
                         }
+                    }
 
-                        .infos-pessoal {
+                    .ads-prev {
+                        display: flex;
+                        gap: 20px;
+
+                        @include mixins.desktop {
+                            justify-content: space-between;
+                        }
+
+                        .prevs {
+                            width: 96px;
+                            height: 64px;
+                            border-radius: 10px;
+                            cursor: pointer;
+
+                            @include mixins.desktop {
+                                width: 148px;
+                                height: 124px;
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        .active {
+                            @include mixins.center;
+                            border: 1.5px solid variables.$primary-D500;
+                            background-color: variables.$white-color;
+
+                            @include mixins.desktop {
+                                border-width: 2px;
+                            }
+
+                            img {
+                                width: 88px;
+                                height: 55px;
+
+                                @include mixins.desktop {
+                                    width: 132px;
+                                    height: 108px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .container-detail-car {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 318px;
+                    padding: 20px;
+                    background-color: variables.$white-color;
+                    border-radius: 10px;
+
+                    @include mixins.desktop {
+                        width: 492px;
+                        height: 508px;
+                    }
+
+                    .container-detail-header {
+                        width: 295px;
+
+                        @include mixins.desktop {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 444px;
+                        }
+
+                        .container-detail-title {
+                            display: flex;
+                            flex-direction: column;
+                            width: 176px;
+                            gap: 6px;
+
+                            @include mixins.desktop {
+                                gap: 8px;
+                                width: 220px;
+                            }
+
+                            .name-car {
+                                font-size: 20px;
+                                font-weight: bold;
+                                letter-spacing: -0.3px;
+                                color: variables.$secondinary-D500;
+
+                                @include mixins.desktop  {
+                                    font-size: 32px;
+                                }
+                            }
+
+                            .cabecalho-reviewer {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+
+                                @include mixins.desktop  {
+                                    gap: 4px;
+                                }
+
+                                .container-star {
+                                    display: flex;
+                                    gap: 4px;
+
+                                    @include mixins.desktop  {
+                                        gap: 2px;
+                                    }
+
+                                    svg {
+                                        width: 12px;
+                                        height: 12px;
+                                        font-size: 2rem;
+                                        color: variables.$star-color;
+                                        @include mixins.desktop  {
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+                                    }
+
+                                    .star-off {
+                                        color: variables.$secondinary-300;
+                                    }
+                                }
+
+                                span {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    letter-spacing: -0.2px;
+                                    color: variables.$secondinary-300;
+
+                                    @include mixins.desktop {
+                                        font-size: 14px;
+                                        letter-spacing: 0px;
+                                        color: variables.$secondinary-400;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .icon-fav {
+                            display: none;
+
+                            @include mixins.desktop  {
+                                display: inline-block;
+                            }
+
+                            svg {
+                                width: 24px;
+                                height: 24px;
+                                font-size: 2rem;
+                                color: variables.$heart-color
+                            }
+                        }
+                    }
+
+                    .container-detail-p {
+                        width: 295px;
+
+                        @include mixins.desktop {
+                            width: 444px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                            font-weight: normal;
+                            line-height: 200%;
+                            color: variables.$secondinary-300;
+
+                            @include mixins.desktop {
+                                font-size: 20px;
+                                letter-spacing: -0.4px;
+                            }
+                        }
+                    }
+
+                    .container-spesification {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 295px;
+
+                        @include mixins.desktop {
+                            width: 444px;
+                        }
+
+                        .content-spesification {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            width: 124px;
+
+                            @include mixins.desktop {
+                                width: 200px;
+                            }
+
+                            .spesification {
+                                display: flex;
+                                justify-content: space-between;
+                                gap: 24px;
+
+                                @include mixins.desktop {
+                                    gap: 16px;
+                                }
+
+                                .sub {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    letter-spacing: -0.2px;
+                                    color: variables.$secondinary-300;
+
+                                    @include mixins.desktop {
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .des {
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    letter-spacing: -0.2px;
+                                    color: variables.$secondinary-D500;
+                                    white-space: nowrap;
+
+                                    @include mixins.desktop {
+                                        font-size: 20px;
+                                        color: variables.$secondinary-400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .container-detail-price {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 295px;
+
+                        @include mixins.desktop {
+                            width: 444px;
+                        }
+
+                        .content-price {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                            width: 120px;
+
+                            @include mixins.desktop {
+                                width: 200px;
+                                gap: 2px;
+                            }
+
+                            h2 {
+                                font-size: 21px;
+                                font-weight: bold;
+                                color: variables.$secondinary-D500;
+
+                                @include mixins.desktop {
+                                    font-size: 25px;
+                                }
+
+                                .day {
+                                    font-size: 12px;
+                                    color: variables.$secondinary-300;
+
+                                    @include mixins.desktop {
+                                        font-size: 16px;
+                                    }
+                                    
+                                }
+                            }
+
+                            .price-off {
+                                font-size: 12px;
+                                text-decoration: line-through;
+                                font-weight: bold;
+                                color: variables.$secondinary-300;
+
+                                @include mixins.desktop {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
+            }
+
+            .container-reviews {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 327px;
+                height: 384px;
+                padding: 20px 15px;
+                background-color: variables.$white-color;
+                border-radius: 10px;
+
+                @include mixins.desktop {
+                    width: 1016px;
+                    height: 452px;
+                    padding: 20px;
+                }
+
+                .container-reviews-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    h1 {
+                        font-size: 20px;
+                        font-weight: 600;
+                        letter-spacing: -0.2px;
+                        color: variables.$secondinary-D500;
+                    }
+
+                    .qnt-reviews {
+                        @include mixins.center;
+                        width: 44px;
+                        height: 28px;
+                        background-color: variables.$primary-D500;
+                        border-radius: 4px;
+
+                        font-size: 14px;
+                        font-weight: bold;
+                        letter-spacing: -0.2px;
+                        color: variables.$white-color;
+                    }
+                }
+
+                .content-review {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 295px;
+                    height: 108px;
+
+                    @include mixins.desktop {
+                        width: 968px;
+                        height: 124px;
+                    }
+
+                    .content-review-cabecalho {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+
+                        .info-perfil {
+                            display: flex;
+                            gap: 8px;
+
+                            .foto-perfil {
+                                width: 44px;
+                                height: 44px;
+
+                                @include mixins.desktop {
+                                    width: 56px;
+                                    height: 56px;
+                                }
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .infos-pessoal {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                gap: 8px;
+                                width: 102px;
+                                height: 44px;
+
+                                @include mixins.desktop {
+                                    width: 128px;
+                                    height: 56px;
+                                }
+
+                                .name {
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    letter-spacing: -0.2px;
+                                    color: variables.$secondinary-D500;
+
+                                    @include mixins.desktop {
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                        letter-spacing: -0.4px;
+                                    }
+                                }
+
+                                .ceo {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    letter-spacing: -0.2px;
+                                    color: variables.$secondinary-300;
+
+                                    @include mixins.desktop {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .container-date {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
+                            align-items: flex-end;
                             gap: 8px;
-                            width: 102px;
-                            height: 44px;
+                            width: 80px;
+                            height: 46px;
 
-                            .name {
-                                font-size: 16px;
-                                font-weight: 600;
-                                letter-spacing: -0.2px;
-                                color: variables.$secondinary-D500;
+                            @include mixins.desktop {
+                                width: 128px;
+                                height: 56px;
                             }
 
-                            .ceo {
+                            .date {
                                 font-size: 12px;
-                                font-weight: 500;
+                                font-weight: 500px;
                                 letter-spacing: -0.2px;
                                 color: variables.$secondinary-300;
+                                padding-top: 5px;
+
+                                @include mixins.desktop {
+                                    font-size: 14px;
+                                }
                             }
-                        }
-                    }
+                            
 
-                    .container-date {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        align-items: flex-end;
-                        gap: 8px;
-                        width: 80px;
-                        height: 46px;
+                            .container-star {
+                                display: flex;
+                                gap: 4px;
 
-                        .date {
-                            font-size: 12px;
-                            font-weight: 500px;
-                            letter-spacing: -0.2px;
-                            color: variables.$secondinary-300;
-                            padding-top: 5px;
+                                @include mixins.desktop {
+                                    gap: 2px;
+                                }
+
+                                svg {
+                                    width: 12px;
+                                    height: 12px;
+                                    font-size: 2rem;
+                                    color: variables.$star-color;
+
+                                    @include mixins.desktop {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+
+                                .star-off {
+                                    color: variables.$secondinary-300;
+                                }
+                            }
                         }
                         
+                    }
 
-                        .container-star {
-                            display: flex;
-                            gap: 4px;
+                    .container-coment {
+                        width: 243px;
+                        height: 48px;
+                        margin:  0 auto;
 
-                            svg {
-                                width: 12px;
-                                height: 12px;
-                                font-size: 2rem;
-                                color: variables.$star-color
-                            }
+                        @include mixins.desktop {
+                            width: 100%;
+                            height: 56px;
+                            padding-left: 65px;
+                        }
 
-                            .star-off {
-                                color: variables.$secondinary-300;
+                        p {
+                            font-size: 12px;
+                            font-weight: normal;
+                            letter-spacing: -0.2px;
+                            line-height: 200%;
+                            color: variables.$secondinary-300;
+
+                            @include mixins.desktop {
+                                font-size: 14px;
+                                width: 896px;
                             }
                         }
                     }
-                    
+
                 }
 
-                .container-coment {
-                    width: 243px;
-                    height: 48px;
-                    margin:  0 auto;
-
-                    p {
-                        font-size: 12px;
-                        font-weight: normal;
-                        letter-spacing: -0.2px;
-                        line-height: 200%;
-                        color: variables.$secondinary-300;
-                    }
+                .container-reviews-show {
+                    @include mixins.center;
+                    width: 100%;
+                    height: 40px;
                 }
-
-            }
-
-            .container-reviews-show {
-                @include mixins.center;
-                width: 100%;
-                height: 40px;
             }
         }
+
+        .container-catalogs {
+
+            @include mixins.desktop {
+                width: 1016px;
+            }
+        }
+
     }
 }
