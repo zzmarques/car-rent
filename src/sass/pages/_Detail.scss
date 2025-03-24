@@ -37,6 +37,12 @@
                     flex-direction: row;
                 }
 
+                @include mixins.laptop {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 .container-ads {
                     display: flex;
                     flex-direction: column;
@@ -428,6 +434,10 @@
                     padding: 20px;
                 }
 
+                @include mixins.laptop {   
+                    width: 100%; 
+                }
+
                 .container-reviews-title {
                     display: flex;
                     align-items: center;
@@ -464,6 +474,10 @@
                     @include mixins.desktop {
                         width: 968px;
                         height: 124px;
+                    }
+
+                    @include mixins.laptop {
+                        width: 100%;
                     }
 
                     .content-review-cabecalho {
@@ -614,6 +628,19 @@
                             @include mixins.desktop {
                                 font-size: 14px;
                                 width: 896px;
+                                height: auto;
+                                white-space: normal;
+                                overflow: visible;
+                                text-overflow: unset;
+                            }
+
+                            @include mixins.laptop {    
+                                width: 600px;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                line-clamp: 2;
                             }
                         }
                     }
@@ -640,6 +667,10 @@
                 width: 1016px;
             }
 
+            @include mixins.laptop {
+                    width: 100%;
+            }
+
             .container-cats {
                 display: flex;
                 flex-direction: column;
@@ -655,7 +686,11 @@
                     @include mixins.desktop {
                         justify-content: space-between;
                         width: 100%;
-                        overflow: auto;
+                        overflow: hidden;
+                    }
+
+                    @include mixins.laptop {
+                        gap: 5px;
                     }
                 }
             }
