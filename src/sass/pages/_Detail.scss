@@ -603,6 +603,13 @@
                             letter-spacing: -0.2px;
                             line-height: 200%;
                             color: variables.$secondinary-300;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            line-clamp: 2;
+                            width: 230px;
+                            height: 48px;
 
                             @include mixins.desktop {
                                 font-size: 14px;
@@ -622,10 +629,38 @@
         }
 
         .container-catalogs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 327px;
+            margin: 0 auto;
+            padding-block: 30px;
 
             @include mixins.desktop {
                 width: 1016px;
             }
+
+            .container-cats {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .cats-cards {
+                    display: flex;
+                    gap: 20px;
+                    width: 350px;
+                    overflow: scroll;
+                    scrollbar-width: none;
+
+                    @include mixins.desktop {
+                        justify-content: space-between;
+                        width: 100%;
+                        overflow: auto;
+                    }
+                }
+            }
+
+            
         }
 
     }

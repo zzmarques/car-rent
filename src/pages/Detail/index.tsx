@@ -1,7 +1,5 @@
 
 import Aside from '../../components/Aside';
-import CatalogPopular from '../../components/CatalogPopular';
-import CatalogRecomendation from '../../components/CatalogRecomendation';
 import '../../sass/pages/_Detail.scss';
 import carImg from '../../../public/img/asd2.png';
 import carV1 from '../../../public/img/view1.png'
@@ -13,6 +11,8 @@ import { HiStar, HiOutlineStar } from "react-icons/hi";
 import { FiChevronDown } from "react-icons/fi";
 import { HiArrowsUpDown } from "react-icons/hi2";
 import { GoHeartFill, GoHeart } from "react-icons/go";
+import CatalogHeader from '../../components/CatalogHeader';
+import CardPopular from '../../components/CardPopular';
 
 
 const Detail = () => {
@@ -184,8 +184,31 @@ const Detail = () => {
                     </section>
 
                     <section className='container-catalogs'>
-                        <CatalogPopular/>
-                        <CatalogRecomendation/>
+                        <div className='container-cats'>
+                            <CatalogHeader>
+                                <span>Recent Car</span>
+
+                                <a href="#"><span>View All</span></a>
+                            </CatalogHeader>
+                            <div className='cats-cards'>
+                                <CardPopular/>
+                                <CardPopular/>
+                                <CardPopular/>
+                            </div>
+                        </div>
+
+                        <div className='container-cats'>
+                            <CatalogHeader>
+                                <span>Recomendation Car</span>
+
+                                <a href="#"><span>View All</span></a>
+                            </CatalogHeader>
+                            <div className='cats-cards'>
+                                <CardPopular/>
+                                <CardPopular/>
+                                <CardPopular/>
+                            </div>
+                        </div>
                     </section>  
 
                 </section>          
