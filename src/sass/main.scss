@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 @use 'buttons' as *;
 @use 'cards' as *;
 
@@ -7,4 +8,51 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.cabecalho-reviewer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include desktop  {
+        gap: 4px;
+    }
+
+    .container-star {
+        display: flex;
+        gap: 4px;
+
+        @include desktop  {
+            gap: 2px;
+        }
+
+        svg {
+            width: 12px;
+            height: 12px;
+            font-size: 2rem;
+            color: $star-color;
+            @include desktop  {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .star-off {
+            color: $secondinary-300;
+        }
+    }
+
+    span {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        color: $secondinary-300;
+
+        @include desktop {
+            font-size: 14px;
+            letter-spacing: 0px;
+            color: $secondinary-400;
+        }
+    }
 }
