@@ -4,6 +4,7 @@ import "../../sass/pages/_Payment.scss";
 import visa from "../../assets/imgs/Visa.png";
 import paypal from "../../assets/imgs/PayPal.png";
 import bitcoin from "../../assets/imgs/Bitcoin.png";
+import sf from "../../assets/imgs/security-safety.png";
 
 const Payment = () => {
     return (
@@ -248,7 +249,38 @@ const Payment = () => {
 
                 </section>
 
+                <section className="container-steps">
 
+                    <div className="header-step">
+                        <div className="header-form">
+                            <h2 className="title">Confirmation</h2>
+                            <span className="subtitle">We are getting to the end. Just few
+                            clicks and your rental is ready!</span>
+                        </div>
+
+                        <span className="steps">Step 4 of 4</span>
+                    </div>
+
+                    <form>
+                        <div>
+                            <input type="radio" name="termo-1" id="termo-1" />
+                            <label htmlFor="termo-1">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="termo-2" id="termo-2" />
+                            <label htmlFor="termo-2">I agree with our terms and conditions and privacy policy!</label>
+                        </div>
+                        
+                        <button>Rental Now</button>
+                    </form>
+
+                    <div>
+                        <img src={sf} alt="security-safety"/>
+                        <span>All your data are safe</span>
+                        <span>We are using the most advanced security to provide you the best experience ever.</span>
+                    </div>
+                </section>
 
             </section>
         </main>
