@@ -5,6 +5,8 @@ import visa from "../../assets/imgs/Visa.png";
 import paypal from "../../assets/imgs/PayPal.png";
 import bitcoin from "../../assets/imgs/Bitcoin.png";
 import sf from "../../assets/imgs/security-safety.png";
+import StepHeader from "../../components/StepHeader";
+import Steps from "../../components/Steps";
 
 const Payment = () => {
     return (
@@ -77,18 +79,14 @@ const Payment = () => {
 
                 </div>
 
-                <section className="container-steps">
+                <Steps>
+                    <StepHeader 
+                        title="Billing Info" 
+                        subtitle="Please enter your billing info" 
+                        step="Step 1 of 4"
+                    />
 
-                    <div className="header-step">
-                        <div className="header-form">
-                            <h2 className="title">Billing Info</h2>
-                            <span className="subtitle">Please enter your billing info</span>
-                        </div>
-
-                        <span className="steps">Step 1 of 4</span>
-                    </div>
-
-                    <form className="form-step">
+                    <form className="form-step-1">
                         <div className="container-inputs">
                             <label htmlFor="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your name"/>
@@ -109,19 +107,16 @@ const Payment = () => {
                             <input type="text" id="city" name="city" placeholder="Town or city"/>
                         </div>
                     </form>
-                </section>
+                </Steps>
 
-                <section className="container-steps">
-                    <div className="header-step">
-                        <div className="header-form">
-                            <h2 className="title">Rental Info</h2>
-                            <span className="subtitle">Please select your rental date</span>
-                        </div>
+                <Steps>
+                    <StepHeader 
+                        title="Rental Info" 
+                        subtitle="Please select your rental date" 
+                        step="Step 2 of 4"
+                    />
 
-                        <span className="steps">Step 2 of 4</span>
-                    </div>
-
-                    <form className="form-step form-stap-2">
+                    <form className="form-stap-2">
 
                         <div className="container-pick-and-drop">
 
@@ -173,24 +168,20 @@ const Payment = () => {
                             </div>
                         </div>
                     </form>
-                </section>
+                </Steps>
 
-                <section className="container-steps">
+                <Steps>
+                    <StepHeader 
+                        title="Payment Method" 
+                        subtitle="Please enter your payment method" 
+                        step="Step 3 of 4"
+                    />
 
-                    <div className="header-step">
-                        <div className="header-form">
-                            <h2 className="title">Payment Method</h2>
-                            <span className="subtitle">Please enter your payment method</span>
-                        </div>
-
-                        <span className="steps">Step 3 of 4</span>
-                    </div>
-
-                    <form className="form-card">
-                        <div>
-                            <div className="container-inputs container-input-radio">
-                                <input type="radio" name="pick" id="pick"/>
-                                <label htmlFor="pick">Credit Card</label>
+                    <form className="form-step-3">
+                        <div className="pag">
+                            <div className="container-input-radio">
+                                <input type="radio" name="pick-pg" id="pick-pg"/>
+                                <label htmlFor="pick-pg">Credit Card</label>
                             </div>
 
                             <div>
@@ -198,33 +189,33 @@ const Payment = () => {
                             </div>
                         </div>
 
-                        <div>
+                        {/* <div className="container-inputs">
                             <label htmlFor="card-number">Card Number</label>
                             <input type="text" id="card-number" name="card-number" placeholder="Card Number"/>
                         </div>
 
-                        <div>
+                        <div className="container-inputs">
                             <label htmlFor="card-holder">Card Holder</label>
                             <input type="text" id="card-holder" name="card-holder" placeholder="Card Holder"/>
                         </div>
 
-                        <div>
+                        <div className="container-inputs">
                             <label htmlFor="expiration">Expiration Date</label>
                             <input type="text" id="expiration" name="expiration" placeholder="DD/MM/YY"/>
                         </div>
 
-                        <div>
+                        <div className="container-inputs">
                             <label htmlFor="cvc">CVC</label>
                             <input type="text" id="cvc" name="cvc" placeholder="CVC"/>
-                        </div>
+                        </div> */}
 
                     </form>
 
-                    <form className="form-card">
-                        <div>
-                            <div className="container-inputs container-input-radio">
-                                <input type="radio" name="pick" id="pick"/>
-                                <label htmlFor="pick">PayPal</label>
+                    <form className="form-step-3">
+                        <div className="pag">
+                            <div className="container-input-radio">
+                                <input type="radio" name="pick-pg" id="pick-pg"/>
+                                <label htmlFor="pick-pg">PayPal</label>
                             </div>
 
                             <div>
@@ -233,11 +224,11 @@ const Payment = () => {
                         </div>
                     </form>
 
-                    <form className="form-card">
-                        <div>
-                            <div className="container-inputs container-input-radio">
-                                <input type="radio" name="pick" id="pick"/>
-                                <label htmlFor="pick">Bitcoin</label>
+                    <form className="form-step-3">
+                        <div className="pag">
+                            <div className="container-input-radio">
+                                <input type="radio" name="pick-pg" id="pick-pg"/>
+                                <label htmlFor="pick-pg">Bitcoin</label>
                             </div>
 
                             <div>
@@ -245,43 +236,36 @@ const Payment = () => {
                             </div>
                         </div>
                     </form>
+                </Steps>
 
+                <Steps>
+                    <StepHeader 
+                        title="Confirmation" 
+                        subtitle="We are getting to the end. Just few
+                        clicks and your rental is ready!" 
+                        step="Step 4 of 4"
+                    />
 
-                </section>
-
-                <section className="container-steps">
-
-                    <div className="header-step">
-                        <div className="header-form">
-                            <h2 className="title">Confirmation</h2>
-                            <span className="subtitle">We are getting to the end. Just few
-                            clicks and your rental is ready!</span>
-                        </div>
-
-                        <span className="steps">Step 4 of 4</span>
-                    </div>
-
-                    <form>
-                        <div>
-                            <input type="radio" name="termo-1" id="termo-1" />
+                    <form className="form-step-4">
+                        <div className="container-checkbox">
+                            <input type="checkbox" name="termo-1" id="termo-1" />
                             <label htmlFor="termo-1">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
                         </div>
 
-                        <div>
-                            <input type="radio" name="termo-2" id="termo-2" />
-                            <label htmlFor="termo-2">I agree with our terms and conditions and privacy policy!</label>
+                        <div className="container-checkbox">
+                            <input type="checkbox" name="termo-2" id="termo-2" />
+                            <label htmlFor="termo-2">I agree with our <span>terms and conditions</span> and <span>privacy policy</span>!</label>
                         </div>
                         
-                        <button>Rental Now</button>
+                        <button className="comfirm">Rental Now</button>
                     </form>
 
-                    <div>
+                    <div className="container-sf">
                         <img src={sf} alt="security-safety"/>
-                        <span>All your data are safe</span>
-                        <span>We are using the most advanced security to provide you the best experience ever.</span>
+                        <span className="title">All your data are safe</span>
+                        <span className="subtitle">We are using the most advanced security to provide you the best experience ever.</span>
                     </div>
-                </section>
-
+                </Steps>
             </section>
         </main>
     )

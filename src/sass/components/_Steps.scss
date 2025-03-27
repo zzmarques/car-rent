@@ -1,0 +1,13 @@
+@use '../variables';
+
+.container-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-block: 15px;
+    background-color: variables.$white-color;
+    border-radius: 10px;
+}

@@ -1,6 +1,7 @@
 
 import "../../sass/components/_Container.scss"
-import PropsReatcNode from "../../types/propsReatcNode";
+import { PropsReatcNode } from "../../types/propsReatcNode";
+
 
 const Container = ({ children }: PropsReatcNode) => {
     return (
