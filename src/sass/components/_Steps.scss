@@ -1,4 +1,5 @@
 @use '../variables';
+@use '../mixins';
 
 .container-steps {
     display: flex;
@@ -10,4 +11,8 @@
     padding-block: 15px;
     background-color: variables.$white-color;
     border-radius: 10px;
+
+    @include mixins.desktop {
+        padding: 20px;
+    }
 }
