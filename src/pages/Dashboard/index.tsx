@@ -4,27 +4,27 @@ import { CgMore } from "react-icons/cg";
 const Dashboard = () => {
     return (
         <main className="dashboard">
-            <section>
-                <div>
+            <section className="detail-rental">
+                <div className="container-title">
                     <h1>Detail Rent</h1>
                 </div>
                 <div className="map"></div>
 
-                <div>
-                    <div>
+                <div className="container-car">
+                    <div className="car-img">
                         <img src="" alt="carro" />
                     </div>
 
-                    <div>
-                        <span>Nissan GT-R</span>
-                        <div>
-                            <span>Sport Car</span>
-                            <span>#9761</span>
+                    <div className="car-info">
+                        <span className="car-name">Nissan GT-R</span>
+                        <div className="container-subtitle">
+                            <span className="type-car">Sport Car</span>
+                            <span className="car-id">#9761</span>
                         </div>
                     </div>
                 </div>
 
-                <div>
+                <div className="container-pick-and-drop">
                     <form className="form-stap-2">
 
                         <div className="container-pick-and-drop">
@@ -86,139 +86,145 @@ const Dashboard = () => {
                     </form>
                 </div>
 
-                <div>
-                    <div>
-                        <span>Total Rental Price</span>
-                        <span>Overall price rental</span>
+                <div className="conatiner-pice-total">
+                    <div className="titles-container">
+                        <span className="title">Total Rental Price</span>
+                        <span className="subtitle">Overall price rental</span>
                     </div>
 
-                    <span>$80.00</span>
+                    <span className="pice-total">$80.00</span>
                 </div>
 
-                <div>
-                    <div>
+            </section>
+
+            <section className="top-cars">
+                <div className="container-top-cars">
+                    <div className="header-top-cars">
                         <h2>Top 5 Car Rental</h2>
 
-                        <div>
+                        <div className="more">
                             <CgMore />
                         </div>
                     </div>
 
-                    <div>
-                        <div>
+                    <div className="rental-car">
+                        <div className="total-rental-car">
                             <h2>72, 030</h2>
-                            <span>Rental Car</span>
+                            <span className="subtitle">Rental Car</span>
                         </div>
                     </div>
 
-                    <div>
-                        <div>
-                            <div>
-                                <span>Sport Car</span>
+                    <div className="content-top-cars">
+                        <div className="container-top-car">
+                            <div className="container-type-car">
+                                <span className="subtitle">Sport Car</span>
                             </div>
-                            <span>17,439</span>
+                            <span className="total">17,439</span>
                         </div>
 
-                        <div>
-                            <div>
-                                <span>SUV</span>
+                        <div className="container-top-car">
+                            <div className="container-type-car">
+                                <span className="subtitle">SUV</span>
                             </div>
-                            <span>9,478</span>
+                            <span className="total">9,478</span>
                         </div>
 
-                        <div>
-                            <div>
-                                <span>Coupe</span>
+                        <div className="container-top-car">
+                            <div className="container-type-car">
+                                <span className="subtitle">Coupe</span>
                             </div>
-                            <span>18,197</span>
+                            <span className="total">18,197</span>
                         </div>
 
-                        <div>
-                            <div>
-                                <span>Hatchback</span>
+                        <div className="container-top-car">
+                            <div className="container-type-car">
+                                <span className="subtitle">Hatchback</span>
                             </div>
-                            <span>12,510</span>
+                            <span className="total">12,510</span>
                         </div>
 
-                        <div>
-                            <div>
-                                <span>MPV</span>
+                        <div className="container-top-car">
+                            <div className="container-type-car">
+                                <span className="subtitle">MPV</span>
                             </div>
-                            <span>14,406</span>
+                            <span className="total">14,406</span>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div>
-                    <div>
-                        <span>Recent Transaction</span>
-                        <div>
+            <section className="recent-cars">
+                <div className="container-recent-cars">
+                    <div className="header-recent-cars">
+                        <span className="title">Recent Transaction</span>
+                        <div className="btn-all">
                             <span>View All</span>
                         </div>
                     </div>
 
-                    <div>
-                        <div>
-                            <div>
-                                <div>
+                    <div className="content-recent-cars">
+
+                        <div className="container-recent-car">
+                            <div className="content-car">
+                                <div className="car-img">
                                     <img src="" alt="carro" />
                                 </div>
-                                <div>
-                                    <span>Nissan GT-R</span>
-                                    <span>Sport Card</span>
+                                <div className="about-car">
+                                    <span className="name-car">Nissan GT-R</span>
+                                    <span className="type-car">Sport Card</span>
                                 </div>
                             </div>
-                            <div>
-                                    <span>20 July</span>
-                                    <span>$80.00</span>
+                            <div className="container-date-and-price">
+                                <span className="date">20 July</span>
+                                <span className="price">$80.00</span>
                             </div>
                         </div>
 
-                        <div>
-                            <div>
-                                <div>
+                        <div className="container-recent-car">
+                            <div className="content-car">
+                                <div className="car-img">
                                     <img src="" alt="carro" />
                                 </div>
-                                <div>
-                                    <span>Koegnigsegg</span>
-                                    <span>Sport Card</span>
+                                <div className="about-car">
+                                    <span className="name-car">Koegnigsegg</span>
+                                    <span className="type-car">Sport Card</span>
                                 </div>
                             </div>
-                            <div>
-                                    <span>19 July</span>
-                                    <span>$99.00</span>
+                            <div className="container-date-and-price">
+                                <span className="price">19 July</span>
+                                <span className="date">$99.00</span>
                             </div>
                         </div>
 
-                        <div>
-                            <div>
-                                <div>
+                        <div className="container-recent-car">
+                            <div className="content-car">
+                                <div className="car-img">
                                     <img src="" alt="carro" />
                                 </div>
-                                <div>
-                                    <span>Rolls-Royce</span>
-                                    <span>Sport Card</span>
+                                <div className="about-car">
+                                    <span className="name-car">Rolls-Royce</span>
+                                    <span className="type-car">Sport Card</span>
                                 </div>
                             </div>
-                            <div>
-                                    <span>18 July</span>
-                                    <span>$96.00</span>
+                            <div className="container-date-and-price">
+                                <span className="price">18 July</span>
+                                <span className="date">$96.00</span>
                             </div>
                         </div>
 
-                        <div>
-                            <div>
-                                <div>
+                        <div className="container-recent-car">
+                            <div className="content-car">
+                                <div className="car-img">
                                     <img src="" alt="carro" />
                                 </div>
-                                <div>
-                                    <span>CR-V</span>
-                                    <span>SUV</span>
+                                <div className="about-car">
+                                    <span className="name-car">CR-V</span>
+                                    <span className="type-car">SUV</span>
                                 </div>
                             </div>
-                            <div>
-                                    <span>17 July</span>
-                                    <span>$80.00</span>
+                            <div className="container-date-and-price">
+                                <span className="price">17 July</span>
+                                <span className="date">$80.00</span>
                             </div>
                         </div>
                     </div>
