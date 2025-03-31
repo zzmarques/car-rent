@@ -44,6 +44,10 @@
                 height: 560px;
             }
 
+            @include mixins.laptop {
+                padding: 15px;
+            }
+
             .rental-card-header {
                 display: flex;
                 flex-direction: column;
@@ -296,6 +300,10 @@
                 width: 852px;
             }
 
+            @include mixins.laptop {
+                width: 550px;
+            }
+
             .form-step-1 {
                 display: flex;
                 flex-direction: column;
@@ -318,6 +326,10 @@
                     @include mixins.desktop {
                         width: 386px;
                         height: 92px;
+                    }
+
+                    @include mixins.laptop {
+                        width: 100%;
                     }
 
                     label {
