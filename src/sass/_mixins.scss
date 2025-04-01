@@ -1,7 +1,20 @@
+@use 'variables';
+
 @mixin center {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin containers-db {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 327px;
+    height: auto;
+    padding-block: 20px;
+    background-color: variables.$white-color;
+    border-radius: 10px;
 }
 
 @mixin desktop {
