@@ -3,6 +3,8 @@ import BtnCategory from "../BtnCategory";
 import Navbar from '../Navbar';
 import '../../sass/components/_Header.scss';
 import { FiMenu } from "react-icons/fi";
+import { IoMdClose } from "react-icons/io";
+
 import { PropsHidenOrShow } from "../../types/propsReatcNode";
 // import Aside from "../Aside";
 
@@ -19,6 +21,9 @@ const Header:  React.FC<PropsHidenOrShow> = ({ HidenOrShowComponents } ) => {
                     <div className="content-header-category">
                         <div className="btn-hamb">
                             <FiMenu />
+                        </div>
+                        <div className="btn-close">
+                        <   IoMdClose />
                         </div>
                         {/* <Aside/> */}
                         <div className='logo'>

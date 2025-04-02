@@ -6,7 +6,10 @@ import Footer from "../Footer";
 const Layout = () => {
     const location = useLocation();
 
-    const showHamburger: boolean = location.pathname.includes("/category") || location.pathname.includes("/detail");
+    const showHamburger: boolean = 
+    location.pathname.includes("/category") || 
+    location.pathname.includes("/detail") || 
+    location.pathname.includes("/dashboard");
 
 
     return (

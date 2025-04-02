@@ -17,7 +17,7 @@
         flex-direction: row;
         gap: 0;
         padding: 0;
-        padding-inline: 20px;
+        padding-inline: 60px;
     }
 
     .container-header {
@@ -103,7 +103,7 @@
     position: relative;
     height: 222px;
     padding-top: 0;
-
+    
     .container-header {
         height: auto;
 
@@ -114,6 +114,21 @@
             align-items: flex-start;
             height: auto;
             width: 100%;
+
+            .btn-close {
+                display: none;
+                position: absolute;
+                z-index: 999;
+                left: 200px;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+
+                svg {
+                    font-size: 2rem;
+                    color: variables.$secondinary-300;
+                }
+            }
         }
     }
 }
