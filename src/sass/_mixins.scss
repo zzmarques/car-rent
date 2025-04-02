@@ -27,3 +27,9 @@
         @content;
     }
 }
+
+@mixin aplicar-cor($cor) {
+    &::before {
+        background-color: $cor !important;
+    }
+}

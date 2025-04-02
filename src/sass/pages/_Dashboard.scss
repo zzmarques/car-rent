@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     width: 100%;
     height: 100%;
     padding-block: 20px;
@@ -229,6 +230,114 @@
                 }
             }
 
+        }
+    }
+
+    .top-cars {
+        @include mixins.containers-db;
+
+        .container-top-cars {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 295px;
+
+            .header-top-cars {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: -0.3px;
+                    color: variables.$secondinary-D500
+                }
+
+                .more {
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        font-size: 3em;
+                        color: variables.$secondinary-D500
+                    }
+                }
+            }
+
+            .rental-car {
+                @include mixins.center;
+                width: 100%;
+
+                .container-rental-car {
+                    @include mixins.center;
+                    width: 220px;
+                    height: 220px;
+
+                    .total-rental-car {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 4px;
+
+                        h2 {
+                            font-size: 28px;
+                            font-weight: bold;
+                            color: variables.$secondinary-D500;
+                        }
+
+                        .subtitle {
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: variables.$secondinary-300;
+                        }
+                    }
+                }
+            }
+
+            .content-top-cars {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .container-top-car {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .container-type-car {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        .subtitle {
+                            font-size: 14px;
+                            font-weight: 600;
+                            letter-spacing: -0.3px;
+                            color: variables.$secondinary-300;
+                        }
+
+                        &::before {
+                            content: '';
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                        }
+
+                        @each $elemento, $cor in variables.$cores {
+                            &.#{$elemento} {
+                                @include mixins.aplicar-cor($cor);
+                            }
+                        }
+                    }
+
+                    .total {
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: -0.3px;
+                        color: variables.$secondinary-D500;
+                    }
+                }
+            }
         }
     }
 

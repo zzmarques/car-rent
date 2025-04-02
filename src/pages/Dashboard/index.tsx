@@ -116,43 +116,46 @@ const Dashboard = () => {
                     </div>
 
                     <div className="rental-car">
-                        <div className="total-rental-car">
-                            <h2>72, 030</h2>
-                            <span className="subtitle">Rental Car</span>
+                        <div className="container-rental-car">
+                            <div className="total-rental-car">
+                                <h2>72, 030</h2>
+                                <span className="subtitle">Rental Car</span>
+                            </div>
                         </div>
                     </div>
 
                     <div className="content-top-cars">
+
                         <div className="container-top-car">
-                            <div className="container-type-car">
+                            <div className="container-type-car elemento1">
                                 <span className="subtitle">Sport Car</span>
                             </div>
                             <span className="total">17,439</span>
                         </div>
 
                         <div className="container-top-car">
-                            <div className="container-type-car">
+                            <div className="container-type-car elemento2">
                                 <span className="subtitle">SUV</span>
                             </div>
                             <span className="total">9,478</span>
                         </div>
 
                         <div className="container-top-car">
-                            <div className="container-type-car">
+                            <div className="container-type-car elemento3">
                                 <span className="subtitle">Coupe</span>
                             </div>
                             <span className="total">18,197</span>
                         </div>
 
                         <div className="container-top-car">
-                            <div className="container-type-car">
+                            <div className="container-type-car elemento4">
                                 <span className="subtitle">Hatchback</span>
                             </div>
                             <span className="total">12,510</span>
                         </div>
 
                         <div className="container-top-car">
-                            <div className="container-type-car">
+                            <div className="container-type-car elemento5">
                                 <span className="subtitle">MPV</span>
                             </div>
                             <span className="total">14,406</span>
