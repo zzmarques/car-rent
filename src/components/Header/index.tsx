@@ -6,6 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 
 import { PropsHidenOrShow } from "../../types/propsReatcNode";
+import AsideAdmin from "../AsideAdmin";
 // import Aside from "../Aside";
 
 
@@ -26,6 +27,7 @@ const Header:  React.FC<PropsHidenOrShow> = ({ HidenOrShowComponents } ) => {
                         <   IoMdClose />
                         </div>
                         {/* <Aside/> */}
+                        <AsideAdmin/>
                         <div className='logo'>
                             <h1>morent</h1>
                         </div>

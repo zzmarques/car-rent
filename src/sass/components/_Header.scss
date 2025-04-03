@@ -115,20 +115,7 @@
             height: auto;
             width: 100%;
 
-            .btn-close {
-                display: none;
-                position: absolute;
-                z-index: 999;
-                left: 200px;
-                width: 24px;
-                height: 24px;
-                cursor: pointer;
-
-                svg {
-                    font-size: 2rem;
-                    color: variables.$secondinary-300;
-                }
-            }
+            
         }
     }
 }

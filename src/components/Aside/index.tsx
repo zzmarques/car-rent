@@ -3,16 +3,9 @@ import "../../sass/components/_Aside.scss"
 
 const Aside = () => {
 
-    const asideOp: boolean = location.pathname.includes("/dashboard");
-
     return (
 
         <aside className= "container-aside">
-            {asideOp ? (
-                <nav>
-                    a
-                </nav>
-            ) : (
                 <nav className="aside-detail">
                     <section className="content-aside">
                         <span className="title-aside">type</span>
@@ -89,7 +82,6 @@ const Aside = () => {
                         
                     </section>
                 </nav>
-            )}
         </aside>
     )
 }
