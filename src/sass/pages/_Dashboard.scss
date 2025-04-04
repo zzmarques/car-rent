@@ -10,455 +10,609 @@
     height: 100%;
     padding-block: 20px;
     background-color:  rgba(variables.$secondinary-200, 0.2);
-    
 
-    .detail-rental {
-        @include mixins.containers-db;
+    @include mixins.desktop {
+        flex-direction: row;
+        align-items: flex-start;
+        gap:  0;
+        padding: 0;
+    }
 
-        .container-detail-rental {
-            display: flex;
-            flex-direction: column;
+    .container-dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include mixins.desktop {
+            flex-direction: row;
+            justify-content: center;
             gap: 20px;
-            width: 295px;
+            width: 100%;
+            padding-top: 20px;
+        }
 
-            .container-title {
-                height: 24px;
-    
-                h1 {
-                    font-size: 16px;
-                    font-weight: bold;
-                    letter-spacing: -0.3px;
-                    color: variables.$secondinary-D500;
-                }
+        .detail-rental {
+            @include mixins.containers-db;
+
+            @include mixins.desktop {
+                width: 524px;
             }
 
-            .map {
-                width: 100%;
-                height: 272px;
-                background-image: url('../../assets/imgs/Maps.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-                border-radius: 10px;
-            }
-
-            .container-car {
+            .container-detail-rental {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                width: 295px;
 
-                .car-img {
-                    width: 116px;
-                    height: 64px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 8px;
-                    }
+                @include mixins.desktop {
+                    width: 476px;
                 }
 
-                .car-info {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 4px;
-                    width: 167px;
-
-                    .car-name {
-                        font-size: 20px;
+                .container-title {
+                    height: 24px;
+        
+                    h1 {
+                        font-size: 16px;
                         font-weight: bold;
+                        letter-spacing: -0.3px;
                         color: variables.$secondinary-D500;
-                    }
 
-                    .container-subtitle {
-                        display: flex;
-                        justify-content: space-between;
-                        width: 100%;
-
-                        .type-car,
-                        .car-id {
-                            font-size: 12px;
-                            font-weight: 500;
-                            letter-spacing: -0.3px;
-                        }
-
-                        .type-car {
-                            color: #3D5278;
-                        }
-                        .car-id {
-                            color: variables.$secondinary-300;
+                        @include mixins.desktop {
+                            font-size: 20px;
                         }
                     }
                 }
-            }
 
-            .content-pick-and-drop {
-                padding-bottom: 20px;
-                border-bottom: 1px solid rgba(variables.$secondinary-200, 0.4);
-                .form {
+                .map {
+                    width: 100%;
+                    height: 272px;
+                    background-image: url('../../assets/imgs/Maps.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    border-radius: 10px;
+                }
+
+                .container-car {
                     display: flex;
-                    flex-direction: column;
-                    gap: 20px;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
 
-                    .container-pick-and-drop {
+                    @include mixins.desktop {
+                        gap: 10px;
+                    }
+
+                    .car-img {
+                        width: 116px;
+                        height: 64px;
+
+                        @include mixins.desktop {
+                            width: 132px;
+                            height: 72px;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 8px;
+                        }
+                    }
+
+                    .car-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        width: 167px;
+
+                        @include mixins.desktop {
+                            position: relative;
+                            width: 70%;
+                        }
+
+                        .car-name {
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: variables.$secondinary-D500;
+
+                            @include mixins.desktop {
+                                font-size: 24px;
+                                letter-spacing: -0.3px;
+                            }
+                        }
+
+                        .container-subtitle {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .type-car,
+                            .car-id {
+                                font-size: 12px;
+                                font-weight: 500;
+                                letter-spacing: -0.3px;
+
+                                @include mixins.desktop {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .type-car {
+                                color: #3D5278;
+                            }
+                            .car-id {
+                                color: variables.$secondinary-300;
+                                @include mixins.desktop {
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .content-pick-and-drop {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba(variables.$secondinary-200, 0.4);
+
+                    .form {
                         display: flex;
                         flex-direction: column;
                         gap: 20px;
 
-                        .container-input-radio{
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            gap: 8px;
-                            height: 20px;
-                            
-                            input[type="radio"] {
-                                cursor: pointer;
-                                appearance: none;
-                                width: 16px;
-                                height: 16px;
-                                position: relative;
-                                border-radius: 50%;
-                                background-color: hsla(209, 96%, 67%, 0.30);
-                
-                                &::before {
-                                    content: "";
-                                    width: 8px;
-                                    height: 8px;
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    background-color: variables.$information-D500;
-                                    border-radius: 50%;
-                                }
-                
-                                &:checked {
-                                    background-color: rgba(variables.$primary-D500, 0.3);
-                                }
-                
-                                &:checked::before {
-                                    background-color: variables.$primary-D500;
-                                }
-                            }
-
-                            label {
-                                font-size: 16px;
-                                font-weight: 600;
-                                letter-spacing: -0.3px;
-                                color: variables.$secondinary-D500;
-                            }
-                        }
-                
-                        .content-inputs {
+                        .container-pick-and-drop {
                             display: flex;
                             flex-direction: column;
                             gap: 20px;
 
-                            .container-inputs {
+                            .container-input-radio{
                                 display: flex;
-                                flex-direction: column;
-                                gap: 12px;
-
-                                label {
-                                    font-size: 14px;
-                                    font-weight: 600;
-                                    letter-spacing: 0.3px;
-                                    color: variables.$secondinary-D500;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 8px;
+                                height: 20px;
+                                
+                                input[type="radio"] {
+                                    cursor: pointer;
+                                    appearance: none;
+                                    width: 16px;
+                                    height: 16px;
+                                    position: relative;
+                                    border-radius: 50%;
+                                    background-color: hsla(209, 96%, 67%, 0.30);
+                    
+                                    &::before {
+                                        content: "";
+                                        width: 8px;
+                                        height: 8px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        background-color: variables.$information-D500;
+                                        border-radius: 50%;
+                                    }
+                    
+                                    &:checked {
+                                        background-color: rgba(variables.$primary-D500, 0.3);
+                                    }
+                    
+                                    &:checked::before {
+                                        background-color: variables.$primary-D500;
+                                    }
                                 }
 
-                                input[type="time"],
-                                input[type="date"],
-                                select {
-                                    width: 100%;
-                                    height: 56px;
-                                    border: 0;
-                                    background-color: #F6F7F9;
-                                    border-radius: 10px;
-                                    padding-left: 20px;
-                
-                                    &::placeholder {
-                                        font-size: 12px;
+                                label {
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    letter-spacing: -0.3px;
+                                    color: variables.$secondinary-D500;
+                                }
+                            }
+                    
+                            .content-inputs {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+
+                                @include mixins.desktop {
+                                    flex-direction: row;
+                                }
+
+                                .container-inputs {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 12px;
+
+                                    label {
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        letter-spacing: 0.3px;
+                                        color: variables.$secondinary-D500;
+                                    }
+
+                                    input[type="time"],
+                                    input[type="date"],
+                                    select {
+                                        width: 100%;
+                                        height: 56px;
+                                        border: 0;
+                                        background-color: #F6F7F9;
+                                        border-radius: 10px;
+                                        padding-left: 20px;
+                    
+                                        &::placeholder {
+                                            font-size: 12px;
+                                            font-weight: 500;
+                                            letter-spacing: -0.3px;
+                                            color: variables.$secondinary-300;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+
+                .conatiner-pice-total {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    height: 48px;
+
+                    .titles-container {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        width: 140px;
+                        height: 100%;
+
+                        @include mixins.desktop {
+                            width: 284px;
+                        }
+
+                        .title {
+                            font-size: 16px;
+                            font-weight: bold;
+                            letter-spacing: -0.3px;
+                            color: variables.$secondinary-D500;
+
+                            @include mixins.desktop {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .subtitle {
+                            font-size: 12px;
+                            font-weight: 500;
+                            letter-spacing: -0.3px;
+                            color: variables.$secondinary-300;
+
+                            @include mixins.desktop {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .pice-total {
+                        font-size: 20px;
+                        font-weight: bold;
+                        letter-spacing: -0.3px;
+                        color: variables.$secondinary-D500;
+
+                        @include mixins.desktop {
+                            font-size: 30px;
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .container-top-recent {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include mixins.desktop {
+                width: 514px;
+            }
+
+            .top-cars {
+                @include mixins.containers-db;
+
+                @include mixins.desktop {
+                    width: 100%;
+                }
+
+                .container-top-cars {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 295px;
+
+                    @include mixins.desktop {
+                        width: 466px;
+                    }
+
+                    .header-top-cars {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        h2 {
+                            font-size: 16px;
+                            font-weight: bold;
+                            letter-spacing: -0.3px;
+                            color: variables.$secondinary-D500;
+
+                            @include mixins.desktop {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .more {
+                            svg {
+                                width: 24px;
+                                height: 24px;
+                                font-size: 3em;
+                                color: variables.$secondinary-D500
+                            }
+                        }
+                    }
+
+                    .rental-and-top-cars {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        @include mixins.desktop {
+                            gap: 10px;
+                            flex-direction: row;
+                        }
+
+                        .rental-car {
+                            @include mixins.center;
+                            width: 100%;
+
+                            @include mixins.desktop {
+                                width: 220px;
+                            }
+
+                            .container-rental-car {
+                                @include mixins.center;
+                                width: 220px;
+                                height: 220px;
+
+                                .total-rental-car {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    gap: 4px;
+
+                                    h2 {
+                                        font-size: 28px;
+                                        font-weight: bold;
+                                        color: variables.$secondinary-D500;
+
+                                        @include mixins.desktop {
+                                            font-size: 24px;
+                                        }
+                                    }
+
+                                    .subtitle {
+                                        font-size: 14px;
                                         font-weight: 500;
-                                        letter-spacing: -0.3px;
                                         color: variables.$secondinary-300;
                                     }
                                 }
                             }
                         }
-                        
-                    }
-                }
-            }
 
-            .conatiner-pice-total {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                height: 48px;
-
-                .titles-container {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 4px;
-                    width: 140px;
-                    height: 100%;
-
-                    .title {
-                        font-size: 16px;
-                        font-weight: bold;
-                        letter-spacing: -0.3px;
-                        color: variables.$secondinary-D500;
-                    }
-
-                    .subtitle {
-                        font-size: 12px;
-                        font-weight: 500;
-                        letter-spacing: -0.3px;
-                        color: variables.$secondinary-300;
-                    }
-                }
-
-                .pice-total {
-                    font-size: 20px;
-                    font-weight: bold;
-                    letter-spacing: -0.3px;
-                    color: variables.$secondinary-D500;
-                }
-            }
-
-        }
-    }
-
-    .top-cars {
-        @include mixins.containers-db;
-
-        .container-top-cars {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 295px;
-
-            .header-top-cars {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                h2 {
-                    font-size: 16px;
-                    font-weight: bold;
-                    letter-spacing: -0.3px;
-                    color: variables.$secondinary-D500
-                }
-
-                .more {
-                    svg {
-                        width: 24px;
-                        height: 24px;
-                        font-size: 3em;
-                        color: variables.$secondinary-D500
-                    }
-                }
-            }
-
-            .rental-car {
-                @include mixins.center;
-                width: 100%;
-
-                .container-rental-car {
-                    @include mixins.center;
-                    width: 220px;
-                    height: 220px;
-
-                    .total-rental-car {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 4px;
-
-                        h2 {
-                            font-size: 28px;
-                            font-weight: bold;
-                            color: variables.$secondinary-D500;
-                        }
-
-                        .subtitle {
-                            font-size: 14px;
-                            font-weight: 500;
-                            color: variables.$secondinary-300;
-                        }
-                    }
-                }
-            }
-
-            .content-top-cars {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-
-                .container-top-car {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .container-type-car {
-                        display: flex;
-                        align-items: center;
-                        gap: 12px;
-
-                        .subtitle {
-                            font-size: 14px;
-                            font-weight: 600;
-                            letter-spacing: -0.3px;
-                            color: variables.$secondinary-300;
-                        }
-
-                        &::before {
-                            content: '';
-                            width: 12px;
-                            height: 12px;
-                            border-radius: 50%;
-                        }
-
-                        @each $elemento, $cor in variables.$cores {
-                            &.#{$elemento} {
-                                @include mixins.aplicar-cor($cor);
-                            }
-                        }
-                    }
-
-                    .total {
-                        font-size: 14px;
-                        font-weight: 600;
-                        letter-spacing: -0.3px;
-                        color: variables.$secondinary-D500;
-                    }
-                }
-            }
-        }
-    }
-
-    .recent-cars {
-        @include mixins.containers-db;
-
-        .container-recent-cars {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 295px;
-
-            .header-recent-cars {
-                display: flex;
-                justify-content: space-between;
-
-                .title {
-                    font-size: 16px;
-                    font-weight: bold;
-                    letter-spacing: -0.3px;
-                    color: variables.$secondinary-D500;
-                }
-
-                .btn-all {
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                    width: 68px;
-                    height: 24px;
-                    cursor: pointer;
-
-                    span {
-                        font-size: 12px;
-                        font-weight: 500;
-                        letter-spacing: -0.3px;
-                        color: #3563E9;
-                    }
-                }
-            }
-
-            .content-recent-cars {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-
-                .container-recent-car {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-                    height: 44px;
-
-                    .content-car {
-                        display: flex;
-                        gap: 10px;
-
-                        .car-img {
-                            width: 76px;
-                            height: 44px;
-
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: contain;
-                                border-radius: 8px;
-                            }
-                        }
-
-                        .about-car {
+                        .content-top-cars {
                             display: flex;
                             flex-direction: column;
-                            gap: 8px;
-                            width: 108px;
+                            gap: 16px;
 
-                            .name-car {
-                                font-size: 14px;
-                                font-weight: bold;
-                                letter-spacing: -0.3px;
-                                color: variables.$secondinary-D500
-                            }
-                            .type-car {
-                                font-size: 12px;
-                                font-weight: 500;
-                                letter-spacing: -0.3px;
-                                color: variables.$secondinary-300
+                            @include mixins.desktop {
+                                justify-content: space-between;
+                                width: 100%;
                             }
 
+                            .container-top-car {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .container-type-car {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 12px;
+
+                                    .subtitle {
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        letter-spacing: -0.3px;
+                                        color: variables.$secondinary-300;
+                                    }
+
+                                    &::before {
+                                        content: '';
+                                        width: 12px;
+                                        height: 12px;
+                                        border-radius: 50%;
+                                    }
+
+                                    @each $elemento, $cor in variables.$cores {
+                                        &.#{$elemento} {
+                                            @include mixins.aplicar-cor($cor);
+                                        }
+                                    }
+                                }
+
+                                .total {
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    letter-spacing: -0.3px;
+                                    color: variables.$secondinary-D500;
+                                }
+                            }
                         }
-                        
+
+                    }
+                }
+            }
+
+            .recent-cars {
+                @include mixins.containers-db;
+
+                @include mixins.desktop {
+                    width: 100%;
+                }
+
+                .container-recent-cars {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 295px;
+
+                    @include mixins.desktop {
+                        width: 476px;
                     }
 
-                    .container-date-and-price {
+                    .header-recent-cars {
                         display: flex;
-                        flex-direction: column;
-                        align-items: flex-end;
-                        gap: 8px;
-                        width: 68px;
+                        justify-content: space-between;
 
-                        .date {
-                            font-size: 12px;
-                            font-weight: 500;
-                            letter-spacing: -0.3px;
-                            color: variables.$secondinary-300
-                        }
-
-                        .price {
+                        .title {
                             font-size: 16px;
                             font-weight: bold;
                             letter-spacing: -0.3px;
-                            color: variables.$secondinary-D500
+                            color: variables.$secondinary-D500;
+
+                            @include mixins.desktop {
+                                font-size: 20px;
+                            }
                         }
 
+                        .btn-all {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            width: 68px;
+                            height: 24px;
+                            cursor: pointer;
+
+                            span {
+                                font-size: 12px;
+                                font-weight: 500;
+                                letter-spacing: -0.3px;
+                                color: #3563E9;
+                            }
+                        }
                     }
 
-                }
+                    .content-recent-cars {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
 
-                .line {
-                    width: 100%;
-                    height: 1px;
-                    background-color: rgba(variables.$secondinary-200, 0.4);
+                        .container-recent-car {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            height: 44px;
+
+                            @include mixins.desktop {
+                                height: 70;
+                            }
+
+                            .content-car {
+                                display: flex;
+                                gap: 10px;
+
+                                .car-img {
+                                    width: 76px;
+                                    height: 44px;
+                                    @include mixins.desktop {
+                                        width: 112px;
+                                        height: 70;
+                                    }
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                        border-radius: 8px;
+                                    }
+                                }
+
+                                .about-car {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+                                    width: 108px;
+
+                                    .name-car {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: -0.3px;
+                                        color: variables.$secondinary-D500;
+                                        @include mixins.desktop {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                    .type-car {
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        letter-spacing: -0.3px;
+                                        color: variables.$secondinary-300
+                                    }
+
+                                }
+                                
+                            }
+
+                            .container-date-and-price {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                gap: 8px;
+                                width: 68px;
+
+                                .date {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    letter-spacing: -0.3px;
+                                    color: variables.$secondinary-300
+                                }
+
+                                .price {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    letter-spacing: -0.3px;
+                                    color: variables.$secondinary-D500
+                                }
+
+                            }
+
+                        }
+
+                        .line {
+                            width: 100%;
+                            height: 1px;
+                            background-color: rgba(variables.$secondinary-200, 0.4);
+                        }
+                    }
                 }
             }
+
         }
+
     }
 }

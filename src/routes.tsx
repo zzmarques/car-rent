@@ -17,8 +17,8 @@ const AppRoutes = () => {
                     <Route path="/category" element={<Category/>}/>
                     <Route path="/detail" element={<Detail />}/>
                     <Route path="/payment" element={<Payment />}/>
-                    <Route path="/dashboard" element={<Dashboard />}/>
                 </Route>
+                <Route path="/dashboard" element={<Dashboard />}/>
             </Routes>
         </BrowserRouter>
     )

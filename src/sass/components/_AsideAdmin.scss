@@ -2,7 +2,7 @@
 @use '../mixins';
 
 .aside-admin {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -16,18 +16,36 @@
     padding-bottom: 40px;
     background-color: variables.$white-color;
 
+    @include mixins.desktop {
+        display: flex;
+        position: relative;
+        justify-content: flex-start;
+        z-index: 0;
+        padding: 20px;
+        height: auto;
+    }
+
     .navbar-admin {
         display: flex;
         flex-direction: column;
         gap: 30px;
         width: 220px;
         margin-top: 95px;
-        scrollbar-width: none;
+
+
+        @include mixins.desktop {
+            gap: 60px;
+            margin: 0;
+        }
         
         .main-manu {
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            @include mixins.desktop {
+                gap: 42px;
+            }
 
 
             .title {
@@ -51,6 +69,10 @@
                     height: 45px;
                     border-radius: 10px;
                     cursor: pointer;
+
+                    @include mixins.desktop {
+                        height: 56px;
+                    }
 
                     svg {
                         width: 24px;
