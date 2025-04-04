@@ -7,11 +7,17 @@ import car4 from '../../../public/img/car-3.png';
 import car5 from '../../../public/img/car3.png';
 import AsideAdmin from "../../components/AsideAdmin";
 import Header from "../../components/Header";
+import { useLocation } from "react-router-dom";
 
 const Dashboard = () => {
+
+    const location = useLocation();
+    
+    const showHamburger: boolean = location.pathname.includes("/dashboard");
+
     return (
         <>
-            <Header/>
+            <Header HidenOrShowComponents={showHamburger}/>
             <main className="dashboard">
                 <AsideAdmin/>
 

@@ -19,10 +19,13 @@
     @include mixins.desktop {
         display: flex;
         position: relative;
-        justify-content: flex-start;
         z-index: 0;
         padding: 20px;
-        height: auto;
+        height: 900px;
+    }
+
+    @include mixins.laptop {
+        height: 1640px;
     }
 
     .navbar-admin {
