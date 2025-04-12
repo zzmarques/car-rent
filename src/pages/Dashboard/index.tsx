@@ -8,6 +8,7 @@ import car5 from '../../../public/img/car3.png';
 import AsideAdmin from "../../components/AsideAdmin";
 import Header from "../../components/Header";
 import { useLocation } from "react-router-dom";
+import PickDrop from "../../components/PickDrop";
 
 const Dashboard = () => {
 
@@ -44,65 +45,7 @@ const Dashboard = () => {
                             </div>
 
                             <div className="content-pick-and-drop">
-                                <form className="form">
-
-                                    <div className="container-pick-and-drop">
-
-                                        <div className="container-inputs container-input-radio">
-                                            <input type="radio" name="pick" id="pick"/>
-                                            <label htmlFor="pick">Pick - Up</label>
-                                        </div>
-
-                                        <div className="content-inputs">
-
-                                            <div className="container-inputs">
-                                                <label htmlFor="pickup-location">Localização</label>
-                                                <select id="pickup-location" name="pickup-location">
-                                                    <option value="">Selecione sua cidade</option>
-                                                </select>
-                                            </div>
-
-                                            <div className="container-inputs">
-                                                <label htmlFor="pickup-time">Horário</label>
-                                                <input type="time" id="pickup-time" name="pickup-time"/>
-                                            </div>
-
-                                            <div className="container-inputs">
-                                                <label htmlFor="pickup-date">Data</label>
-                                                <input type="date" id="pickup-date" name="pickup-date"/>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="container-pick-and-drop">
-
-                                        <div className="container-inputs container-input-radio">
-                                            <input type="radio" name="drop" id="drop"/>
-                                            <label htmlFor="drop">Drop - Off</label>
-                                        </div>
-
-                                        <div className="content-inputs">
-
-                                            <div className="container-inputs">
-                                                <label htmlFor="dropoff-location">Localização</label>
-                                                <select id="dropoff-location" name="dropoff-location">
-                                                    <option value="">Selecione sua cidade</option>
-                                                </select>
-                                            </div>
-
-                                            <div className="container-inputs">
-                                                <label htmlFor="dropoff-time">Horário</label>
-                                                <input type="time" id="dropoff-time" name="dropoff-time"/>
-                                            </div>
-
-                                            <div className="container-inputs">
-                                                <label htmlFor="dropoff-date">Data</label>
-                                                <input type="date" id="dropoff-date" name="dropoff-date"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                <PickDrop/>
                             </div>
 
                             <div className="conatiner-pice-total">
@@ -273,7 +216,7 @@ const Dashboard = () => {
             </main>
         
         </>
-    )
-}
+    );
+};
 
-export default Dashboard
+export default Dashboard;
