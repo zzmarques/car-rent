@@ -27,12 +27,12 @@
         border-radius: 10px;
 
         @include mixins.desktop {
-            width: 582px;
+            width: 582px ;
             height: 120px;
         }
 
         @include mixins.laptop {
-            width: 100%;
+            width: 100% ;
         }
 
         .conetent-pick {
@@ -44,13 +44,13 @@
             height: 88px;
 
             @include mixins.desktop {
-                width: 486px;
+                width: 482px ;
                 height: auto;
                 gap: 10px;
             }     
             
             @include mixins.laptop {
-                width: 430px;
+                width: 430px ;
             }
 
             .label-pick {
@@ -106,7 +106,7 @@
                 }
             }
 
-            .info {
+            .container-inputs {
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
@@ -122,7 +122,7 @@
                     background-color: rgba(variables.$secondinary-200, 0.4);
                 }
 
-                .field {
+                .content-input {
                     cursor: pointer;
                     display: flex;
                     flex-direction: column;
@@ -135,56 +135,70 @@
 
                     }
 
-                    .container-select {
+                    .select-wrapper {
+                        position: relative;
+                        cursor: pointer;
 
-                        .select {
-                            @include mixins.center;
-                            gap: 4px;
+                        
+                        select {
+                            appearance: none;
+                            display: flex;
+
                             width: 76px;
                             height: 16px;
+                            
+                            border: 0;
 
-                            span {
-                                font-size: 12px;
-                                font-weight: 400;
-                                color: variables.$secondinary-300;
-                            }
-
+                            font-size: 12px;
+                            font-weight: 400;
+                            color: variables.$secondinary-300;
+                            cursor: pointer;
                         }
-
-                        svg {
-                            font-size: 20px;
-                            color: variables.$secondinary-D500;
+            
+                        .icon {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            pointer-events: none; 
+                            font-size: 14px;
+                            color: variables.$secondinary-D500 !important;
                         }
-                    }
-
-                    .container-date {
-                        .date {
-                            @include mixins.center;
-                            gap: 4px;
+            
+                        .invisible-input {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
                             width: 87px;
-                            height: 16px;
-
-                            span {
-                                font-size: 12px;
-                                font-weight: 400;
-                                white-space: nowrap;
-                                color: variables.$secondinary-300;
-                            }
+                            opacity: 0;
+                            cursor: pointer;
+                            z-index: 2;
                         }
-                    }
-
-                    .container-time {
-                        .time {
-                            @include mixins.center;
+            
+                        .custom-display {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
                             gap: 4px;
-                            width: 52px;
-                            height: 16px;
-
+                            pointer-events: none;
+                            cursor: pointer;
+                            
                             span {
                                 font-size: 12px;
-                                font-weight: 400;
                                 color: variables.$secondinary-300;
+                                font-weight: 400;
+                                letter-spacing: -0.3px;
                             }
+
+                            svg {
+                                cursor: pointer; 
+                                font-size: 14px;
+                                color: variables.$secondinary-D500;
+                            }
+                        } 
+                        
+                        .time {
+                            width: 52px;
                         }
                     }
 

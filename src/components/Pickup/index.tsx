@@ -15,38 +15,48 @@ const Pickup: React.FC<PropsHidenOrShow> = ( {HidenOrShowComponents} ) => {
                         <span>Pick - Up</span>
                     </label>
                     
-                    <div className="info">
-                        <div className="field">
-                            <label>Locations</label>
-                            <div className="container-select">
-                                <div className="select">
-                                    <span>Semarang</span>
-                                    <FiChevronDown/>
-                                </div>
+                    <div className="container-inputs">
+
+                        <div className="content-input">
+                            <label htmlFor="pickup-location">Locations</label>
+                            
+                            <div className="select-wrapper">
+                                <select id="pickup-location" name="pickup-location">
+                                    <option value="Kota Semarang">Semarang</option>
+                                </select>
+                                <FiChevronDown className='icon'/>
                             </div>
+
                         </div>
+
                         <div className="linha"></div>
-                        <div className="field">
-                            <label>Date</label>
-                            <div className="container-date">
-                                <div className="date">
+
+                        <div className="content-input">
+                            <label htmlFor="pickup-date">Date</label>
+
+                            <div className="select-wrapper">
+                                <input type="date" className="invisible-input" id="pickup-date" name='pickup-date' value="2022-07-20"/>
+                                <div className="custom-display" id="displayDate">
                                     <span>20 July 2022</span>
                                     <FiChevronDown/>
                                 </div>
                             </div>
-                            
                         </div>
                         <div className="linha"></div>
-                        <div className="field">
-                            <label>Time</label>
-                            <div className="container-time">
-                                <div className="time">
-                                    <span>07:00</span>
+
+                        <div className="content-input">
+                            <label htmlFor="pickup-time">Time</label>
+
+                            <div className="select-wrapper">
+                                <input type="time" className="invisible-input time" name='pickup-time' id="pickup-time" value="07:00"/>
+                                <div className="custom-display" id="displayTime">
+                                    <span>07.00</span>
                                     <FiChevronDown/>
                                 </div>
-
                             </div>
                         </div>
+                        
+
                     </div>
 
                 </div>
@@ -55,43 +65,53 @@ const Pickup: React.FC<PropsHidenOrShow> = ( {HidenOrShowComponents} ) => {
             <button className="swap-btn"><HiArrowsUpDown/></button>
 
             <div className="cardPick">
+
                 <div className='conetent-pick'>
                     <label className='label-drop'>
                         <input type="radio" name="trip"/>
                         <span>Drop - Off</span>
                     </label>
-                    <div className="info">
-                            <div className="field">
-                                <label>Locations</label>
-                                <div className="container-select">
-                                    <div className="select">
-                                        <span>Semarang</span>
-                                        <FiChevronDown/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="linha"></div>
-                            <div className="field">
-                                <label>Date</label>
-                                <div className="container-date">
-                                    <div className="date">
-                                        <span>20 July 2022</span>
-                                        <FiChevronDown/>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div className="linha"></div>
-                            <div className="field">
-                                <label>Time</label>
-                                <div className="container-time">
-                                    <div className="time">
-                                        <span>07:00</span>
-                                        <FiChevronDown/>
-                                    </div>
 
+                    <div className="container-inputs">
+
+                        <div className="content-input">
+                            <label htmlFor="pickup-location">Locations</label>
+                            
+                            <div className="select-wrapper">
+                                <select id="pickup-location" name="pickup-location">
+                                    <option value="Kota Semarang">Semarang</option>
+                                </select>
+                                <FiChevronDown className='icon'/>
+                            </div>
+
+                        </div>
+
+                        <div className="linha"></div>
+
+                        <div className="content-input">
+                            <label htmlFor="pickup-date">Date</label>
+
+                            <div className="select-wrapper">
+                                <input type="date" className="invisible-input" id="pickup-date" name='pickup-date' value="2022-07-20"/>
+                                <div className="custom-display" id="displayDate">
+                                    <span>20 July 2022</span>
+                                    <FiChevronDown/>
                                 </div>
                             </div>
+                        </div>
+                        <div className="linha"></div>
+
+                        <div className="content-input">
+                            <label htmlFor="pickup-time">Time</label>
+
+                            <div className="select-wrapper">
+                                <input type="time" className="invisible-input time" name='pickup-time' id="pickup-time" value="07:00"/>
+                                <div className="custom-display" id="displayTime">
+                                    <span>07.00</span>
+                                    <FiChevronDown/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
